@@ -1,3 +1,9 @@
+**#This is a SPA site (Single Page App)**
+As usual, make issues based on the figma design. 
+
+
+
+
 # Template repo
 Bruk dette repositoriet for å starte nye NextJS baserte prosjekter. Husk å sjekk `package.json` og oppdater eventuelle deps
 
