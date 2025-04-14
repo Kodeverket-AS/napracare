@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <nav className="top-0 left-0 w-screen bg-white shadow-md z-50">
-      <div className="container mx-auto px-6 py-3">
+      <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <span className="text-4xl font-bold text-dark-primary">
@@ -50,7 +50,7 @@ export default function Navbar() {
             <div className="flex items-center space-x-8">
               {[
                 { id: "home", label: "Tjenester" },
-                { id: "about", label: "Hva er Naprapati" },
+                { id: "about", label: "Naprapati?" },
                 { id: "services", label: "Anmeldelser" },
                 { id: "contact", label: "Kontakt" },
               ].map((item) => (

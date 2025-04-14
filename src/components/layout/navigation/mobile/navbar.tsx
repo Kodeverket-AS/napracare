@@ -97,7 +97,7 @@ export default function MobileNavbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="mobile-menu bg-white shadow-md">
+        <div className="fixed w-screen mobile-menu bg-white shadow-md">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
             {[
               { id: "home", label: "Tjenester" },
