@@ -1,12 +1,12 @@
 import Image from "next/image";
 export function Footer() {
   return (
-    <footer className="container flex flex-col text-center bg-gray-800 py-8 gap-6">
-      <section className="container text-xl">
+    <footer className="container flex flex-col text-center items-center bg-zinc-800 py-8 gap-6">
+      <section className="text-xl">
         <h2>NAPCRACARE</h2>
       </section>
-      <section className=" flex flex-col gap-6 ">
-        <div className=" flex flex-row ">
+      <section className=" flex flex-col gap-6 items-center">
+        <div className=" flex flex-row gap-1">
           <Image
             src="/footer/lucide_facebook.png"
             width={25}
@@ -17,7 +17,7 @@ export function Footer() {
             <a href="">Facebook</a>
           </p>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-1">
           <Image
             src="/footer/lucide_phone.png"
             width={25}
