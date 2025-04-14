@@ -5,7 +5,7 @@ export function Footer() {
       <section className="text-xl">
         <h2>NAPCRACARE</h2>
       </section>
-      <section className=" flex flex-col gap-6 items-center lg:flex-row">
+      <section className=" flex flex-col gap-6 items-center lg:flex-row-reverse">
         <div className=" flex flex-row gap-1">
           <Image
             src="/footer/lucide_facebook.png"
