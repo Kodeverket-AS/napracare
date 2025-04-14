@@ -1,23 +1,23 @@
 import Image from "next/image";
 export function Footer() {
   return (
-    <footer className="container flex flex-col items-center bg-gray-800 py-8 gap-6">
+    <footer className="container flex flex-col text-center bg-gray-800 py-8 gap-6">
       <section className="container text-xl">
         <h2>NAPCRACARE</h2>
       </section>
-      <section className="container flex flex-col gap-6">
-        <div className="container flex flex-row">
+      <section className=" flex flex-col gap-6 ">
+        <div className=" flex flex-row ">
           <Image
             src="/footer/lucide_facebook.png"
             width={25}
             height={25}
             alt="Facebook Icon"
           />
-          <p className="container hover:text-blue-600">
+          <p className="hover:text-blue-600">
             <a href="">Facebook</a>
           </p>
         </div>
-        <div className="container flex flex-row">
+        <div className="flex flex-row">
           <Image
             src="/footer/lucide_phone.png"
             width={25}
@@ -26,7 +26,7 @@ export function Footer() {
           />
           <p>951 26 366</p>
         </div>
-        <div className="container flex flex-row">
+        <div className=" flex flex-row">
           <Image
             src="/footer/lucide_mail.png"
             width={25}
@@ -35,19 +35,19 @@ export function Footer() {
           />
           <p>napraptklinikkvest@gmail.com</p>
         </div>
-        <div className="container flex flex-row">
+        <div className=" flex flex-row">
           <Image
             src="/footer/lucide_map-pin.png"
             width={25}
             height={20}
             alt="Location Icon"
           />
-          <p className="container flex flex-row gap-1">
+          <p className=" flex flex-row gap-1">
             Valkenfordsgaten 9, Bergen, Norway
           </p>
         </div>
       </section>
-      <section className="container flex flex-col">
+      <section className=" flex flex-col">
         <p>Utviklet i regnet av Kodeverket Bergen</p>
         <p> @ 2025</p>
       </section>
