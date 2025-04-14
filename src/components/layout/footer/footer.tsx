@@ -1,7 +1,7 @@
 import Image from "next/image";
 export function Footer() {
   return (
-    <footer className="container flex flex-col text-center items-center bg-zinc-800 py-8 gap-6">
+    <footer className="container flex flex-col text-center items-center bg-[#333333] py-8 gap-6">
       <section className="text-xl">
         <h2>NAPCRACARE</h2>
       </section>
