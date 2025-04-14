@@ -14,7 +14,12 @@ export function Footer() {
             alt="Facebook Icon"
           />
           <p className="hover:text-blue-600">
-            <a href="">Facebook</a>
+            <a
+              href="https://www.facebook.com/naprapatorjanbask/"
+              target="_blank"
+            >
+              Facebook
+            </a>
           </p>
         </div>
         <div className="flex flex-row gap-1">
@@ -26,7 +31,7 @@ export function Footer() {
           />
           <p>951 26 366</p>
         </div>
-        <div className=" flex flex-row">
+        <div className=" flex flex-row gap-1">
           <Image
             src="/footer/lucide_mail.png"
             width={25}
@@ -35,7 +40,7 @@ export function Footer() {
           />
           <p>napraptklinikkvest@gmail.com</p>
         </div>
-        <div className=" flex flex-row">
+        <div className=" flex flex-row gap-1">
           <Image
             src="/footer/lucide_map-pin.png"
             width={25}
