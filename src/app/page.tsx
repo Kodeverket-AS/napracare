@@ -1,8 +1,8 @@
-import Map from "@/components/map";
+import { DynamicMap } from "@/components/Map/NextjsMap";
 export default function Home() {
   return (
     <main>
-      <Map />
+      <DynamicMap />
     </main>
   );
 }
