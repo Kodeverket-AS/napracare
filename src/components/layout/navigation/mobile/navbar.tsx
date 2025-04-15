@@ -54,7 +54,7 @@ export default function MobileNavbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50 md:hidden">
+    <nav className="top-0 left-0 w-screen bg-white shadow-md z-50 md:hidden">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -97,7 +97,7 @@ export default function MobileNavbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="mobile-menu bg-white shadow-md">
+        <div className="fixed w-screen mobile-menu bg-white shadow-md">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
             {[
               { id: "home", label: "Tjenester" },
