@@ -1,4 +1,4 @@
-import { DynamicMap } from "@/components/Map/NextjsMap";
+import DynamicMap from "@/components/Map/NextjsMap";
 export default function Home() {
   return (
     <main>

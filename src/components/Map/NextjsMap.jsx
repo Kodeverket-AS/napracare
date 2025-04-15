@@ -4,6 +4,6 @@ const DynamicMap = dynamic(() => import("./Map.jsx"), {
   ssr: false,
 });
 
-export function NextjsMap() {
+export default function NextjsMap() {
   return <DynamicMap />;
 }
