@@ -1,6 +1,6 @@
-"use client";
-import dynamic from "next/dynamic";
+// "use client";
+// import dynamic from "next/dynamic";
 
-const DynamicMap = dynamic(() => import("@/components/Map/Map.tsx"), {
-  ssr: false,
-});
+// const DynamicMap = dynamic(() => import("@/components/Map/Map.tsx"), {
+//   ssr: false,
+// });
