@@ -1,9 +1,9 @@
 "use client";
-import { Map } from "@/components/Map/Map";
+import { NextMap } from "@/components/Map/index";
 export default function Home() {
   return (
     <main>
-      <Map />
+      <NextMap />
     </main>
   );
 }

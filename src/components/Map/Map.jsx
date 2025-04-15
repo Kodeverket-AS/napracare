@@ -1,13 +1,9 @@
 "use client";
 import "leaflet/dist/leaflet.css";
-import dynamic from "next/dynamic";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-// const MapProvider = dynamic(() => import("@/components/Map/Map"), {
-//   ssr: false,
-// });
-
 export function Map() {
+  if (typeof window === "undefined") return <></>;
   return (
     <div>
       <MapContainer

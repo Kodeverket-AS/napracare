@@ -1,6 +1,10 @@
-// "use client";
-// import dynamic from "next/dynamic";
+"use client";
+import dynamic from "next/dynamic";
+export const DynamicMap = dynamic(() => import("./Map"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
-// const DynamicMap = dynamic(() => import("@/components/Map/Map.tsx"), {
-//   ssr: false,
-// });
+export function NextMap() {
+  return <DynamicMap />;
+}
