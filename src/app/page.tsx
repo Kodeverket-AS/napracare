@@ -1,3 +1,8 @@
+import Map from "@/components/map/Map";
 export default function Home() {
-  return <main>test</main>;
+  return (
+    <main>
+      <Map />
+    </main>
+  );
 }
