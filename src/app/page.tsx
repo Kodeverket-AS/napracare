@@ -1,4 +1,4 @@
-import Map from "@/components/map/Map";
+import Map from "@/components/map";
 export default function Home() {
   return (
     <main>
