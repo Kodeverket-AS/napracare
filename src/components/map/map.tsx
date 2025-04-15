@@ -6,12 +6,12 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 export function Map() {
   if (typeof window === "undefined") return <></>;
   return (
-    <div>
+    <div className="flex justify-center  w-full h-[500px]">
       <MapContainer
-        className="w-[500px] h-[300px]"
+        className="flex w-screen h-full"
         center={[60.388103254544305, 5.332078267107137]}
         zoom={15}
-        scrollWheelZoom={false}
+        scrollWheelZoom={true}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

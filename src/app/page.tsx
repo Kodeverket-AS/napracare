@@ -4,8 +4,11 @@ import { Map } from "@/components/map";
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <main>
+        <p>test</p>
+      </main>
       <Map />
-    </main>
+    </>
   );
 }
