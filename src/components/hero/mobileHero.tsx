@@ -10,7 +10,7 @@ export function MobileHero() {
         <p className="text-[32px]/[120%] font-[500] mx-6 mb-10">
           Veien til helse starter her - registrer deg nå.
         </p>
-        <button className="flex justify-center items-center gap-1 bg-main-500 w-[320px] h-[56px] mx-5 p-1 rounded-xl text-white text-lg">
+        <button className="flex justify-center items-center gap-[16px] bg-main-500 w-[320px] h-[56px] mx-5 mb-[40px] rounded-[8px] text-white text-lg">
           Bestill time <ArrowRight />
         </button>
       </section>
