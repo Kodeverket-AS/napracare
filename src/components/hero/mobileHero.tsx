@@ -4,14 +4,14 @@ export function MobileHero() {
   return (
     <div className="bg-white w-screen">
       <section className="flex justify-center items-center text-zinc-700">
-        <div className="w-[360px] sm:w-[640px]">
-          <h2 className="text-[56px]/[110%] font-[600] mx-5 mt-5 mb-3">
+        <div className="w-[360px] sm:w-[640px] gap-[24px]">
+          <h2 className="text-[56px]/[110%] font-[600] mx-5 mt-5 mb-[24px]">
             Vi lindrer smertene dine på en profosjonell måte
           </h2>
-          <p className="text-[32px]/[120%] font-[500] mx-6 mb-10">
+          <p className="max-w-[360px] text-[32px]/[120%] font-[500] mx-6 mb-[36px]">
             Veien til helse starter her - registrer deg nå.
           </p>
-          <button className="flex justify-center items-center gap-[16px] bg-main-500 w-[320px] h-[56px] mx-5 mb-[40px] rounded-[8px] text-white text-lg">
+          <button className="flex justify-center items-center gap-[16px] bg-main-500 w-[320px] h-[56px] mx-5 mb-[40px] rounded-[8px] text-white text-lg sm:w-[188px]">
             Bestill time <ArrowRight />
           </button>
         </div>
