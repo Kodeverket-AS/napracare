@@ -16,10 +16,10 @@ export function DesktopHero() {
         </section>
         <section className="flex flex-col h-[853px]">
           <Image
-            className="h-[800px] mt-[53px]"
+            className="h-[800px] mt-[53px] min-w-[444]"
             src="/doctor-with-crossed-arms.png"
             width={444}
-            height={720}
+            height={800}
             alt="doctor with crossed arms"
           />
         </section>
