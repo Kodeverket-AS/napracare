@@ -7,12 +7,12 @@ export function MobileHero() {
         <h2>Vi lindrer smertene dine på en profosjonell måte</h2>
         <p>Veien til helse starter her - registrer deg nå.</p>
       </section>
-      <section className="h-[360px] ">
+      <section className="h-[500px] ">
         <Image
-          className="position fixed"
+          className="h-full "
           src="/doctor-with-crossed-arms.png"
-          width={100}
-          height={360}
+          width={50}
+          height={500}
           alt="doctor with crossed arms"
         />
         <div className="w-screen h-[260px]"></div>
