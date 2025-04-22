@@ -1,11 +1,11 @@
 "use client";
-import { MobileHero } from "@/components/hero/mobileHero";
+import { Hero } from "@/components/hero/hero";
 import { Map } from "@/components/map";
 
 export default function Home() {
   return (
     <>
-      <MobileHero />
+      <Hero />
       <Map />
     </>
   );
