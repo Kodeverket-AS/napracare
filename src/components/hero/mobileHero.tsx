@@ -4,12 +4,11 @@ export function MobileHero() {
   return (
     <div className="bg-white w-screen">
       <section className="text-zinc-700 w-[360px]">
-        <h2 className="text-4xl font-bold mt-5 mx-4 mb-3">
+        <h2 className="text-[56px]/[110%] font-[600] mx-5 mt-5 mb-3">
           Vi lindrer smertene dine på en profosjonell måte
         </h2>
-        <p className="text-xl font-semibold mx-6 mb-10">
-          Veien til helse starter her
-          <br />- registrer deg nå.
+        <p className="text-[32px]/[120%] font-[500] mx-6 mb-10">
+          Veien til helse starter her - registrer deg nå.
         </p>
         <button className="flex justify-center items-center gap-1 bg-main-500 w-[320px] h-[56px] mx-5 p-1 rounded-xl text-white text-lg">
           Bestill time <ArrowRight />
