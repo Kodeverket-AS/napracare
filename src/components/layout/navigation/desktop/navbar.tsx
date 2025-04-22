@@ -50,7 +50,7 @@ export default function Navbar() {
             <div className="flex items-center space-x-8">
               {[
                 { id: "home", label: "Tjenester" },
-                { id: "about", label: "Naprapati?" },
+                { id: "about", label: "Hva er Naprapati" },
                 { id: "services", label: "Anmeldelser" },
                 { id: "contact", label: "Kontakt" },
               ].map((item) => (
