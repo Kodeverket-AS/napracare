@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Facebook, Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
