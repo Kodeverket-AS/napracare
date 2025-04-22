@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Facebook, Phone, Mail, MapPin } from "lucide-react";
+
 export function Footer() {
   return (
     <footer className="w-full flex flex-col text-center items-center bg-[#333333] py-8 gap-6">
@@ -7,12 +9,7 @@ export function Footer() {
       </section>
       <section className=" flex flex-col gap-6 items-center lg:flex-row-reverse">
         <div className=" flex flex-row gap-1">
-          <Image
-            src="/footer/lucide_facebook.png"
-            width={25}
-            height={25}
-            alt="Facebook Icon"
-          />
+          <Facebook />
           <p className="hover:text-blue-600">
             <a
               href="https://www.facebook.com/naprapatorjanbask/"
@@ -23,30 +20,15 @@ export function Footer() {
           </p>
         </div>
         <div className="flex flex-row gap-1">
-          <Image
-            src="/footer/lucide_phone.png"
-            width={25}
-            height={25}
-            alt="Phone Icon"
-          />
+          <Phone />
           <p>951 26 366</p>
         </div>
         <div className=" flex flex-row gap-1">
-          <Image
-            src="/footer/lucide_mail.png"
-            width={25}
-            height={25}
-            alt="Mail Icon"
-          />
+          <Mail />
           <p>napraptklinikkvest@gmail.com</p>
         </div>
         <div className=" flex flex-row gap-1">
-          <Image
-            src="/footer/lucide_map-pin.png"
-            width={25}
-            height={20}
-            alt="Location Icon"
-          />
+          <MapPin />
           <p className=" flex flex-row gap-1">
             Valkenfordsgaten 9, Bergen, Norway
           </p>
