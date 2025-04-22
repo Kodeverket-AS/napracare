@@ -3,22 +3,24 @@ import { ArrowRight } from "lucide-react";
 export function MobileHero() {
   return (
     <div className="bg-white w-screen">
-      <section className="text-zinc-700 w-[360px]">
-        <h2 className="text-[56px]/[110%] font-[600] mx-5 mt-5 mb-3">
-          Vi lindrer smertene dine på en profosjonell måte
-        </h2>
-        <p className="text-[32px]/[120%] font-[500] mx-6 mb-10">
-          Veien til helse starter her - registrer deg nå.
-        </p>
-        <button className="flex justify-center items-center gap-[16px] bg-main-500 w-[320px] h-[56px] mx-5 mb-[40px] rounded-[8px] text-white text-lg">
-          Bestill time <ArrowRight />
-        </button>
+      <section className="flex justify-center items-center text-zinc-700">
+        <div className="w-[360px] sm:w-[640px]">
+          <h2 className="text-[56px]/[110%] font-[600] mx-5 mt-5 mb-3">
+            Vi lindrer smertene dine på en profosjonell måte
+          </h2>
+          <p className="text-[32px]/[120%] font-[500] mx-6 mb-10">
+            Veien til helse starter her - registrer deg nå.
+          </p>
+          <button className="flex justify-center items-center gap-[16px] bg-main-500 w-[320px] h-[56px] mx-5 mb-[40px] rounded-[8px] text-white text-lg">
+            Bestill time <ArrowRight />
+          </button>
+        </div>
       </section>
-      <section className="flex items-center flex-col h-[648px] ">
+      <section className="flex flex-col justify-end items-center h-[660px] ">
         <Image
-          className="flex position absolute h-[648px]"
+          className="flex position absolute h-[633px]"
           src="/doctor-with-crossed-arms.png"
-          width={350}
+          width={360}
           height={648}
           alt="doctor with crossed arms"
         />
