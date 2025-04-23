@@ -22,7 +22,7 @@ export function Reviews() {
           </button>
         </div>
       </section>
-      <section className="flex flex-col justify-between h-[312px] bg-main-500 text-white mx-5 mb-8 p-5 rounded-xl">
+      <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl">
         <p>
           Kan virkelig varmt anbefale Ørjan for de som kjenner at de trenger
           litt "service"! Han har en egen evne til å få koppen på plass og i
