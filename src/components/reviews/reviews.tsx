@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, UserRound } from "lucide-react";
 export function Reviews() {
   return (
     <div className="bg-white w-full">
-      <section className="text-main-500 mx-5 mt-8">
+      <section className="text-main-500 mx-5 mt-8 sm:mx-10 sm:mt-16">
         <h1 className="text-[48px]/[110%] font-[600] mb-5">
           Hva sier kundene?
         </h1>
@@ -22,7 +22,7 @@ export function Reviews() {
           </button>
         </div>
       </section>
-      <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl">
+      <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px]">
         <p>
           Kan virkelig varmt anbefale Ørjan for de som kjenner at de trenger
           litt "service"! Han har en egen evne til å få koppen på plass og i
