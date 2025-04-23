@@ -1,6 +1,39 @@
 import { ArrowLeft, ArrowRight, UserRound } from "lucide-react";
+import PreviousMap_ from "postcss/lib/previous-map";
+import { useState } from "react";
 
 export function Reviews() {
+  const [counter, setCounter] = useState(0);
+
+  function handleIncrement(i) {
+    setCounter((prev) => prev + 1);
+    if (counter >= i) {
+      setCounter(i);
+    }
+  }
+
+  function handleDecrement() {
+    setCounter((prev) => prev - 1);
+    if (counter <= 0) {
+      setCounter(0);
+    }
+  }
+
+  const reviews = [
+    { name: "Timmy Turner", date: "21. Januar", review: "It was great!" },
+    {
+      name: "John Doe",
+      date: "28. Februar",
+      review: "Det var både godt og vondt, men mest godt!",
+    },
+    {
+      name: "Karen Lillebø",
+      date: "6. September",
+      review:
+        "Detta kan æ virkeli anbefala! Det er så deili å endeli kunne gjøra husarbei utan å ha konstant aua i ryggjen.",
+    },
+  ];
+
   return (
     <div className="flex flex-col bg-white w-full lg:flex-row lg:h-[429px] lg:justify-center lg:items-center lg:px-[96px] lg:gap-10">
       <section className="text-main-500 mx-5 mt-8 sm:mx-10 sm:mt-16 lg:m-0">
