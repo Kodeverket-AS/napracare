@@ -72,7 +72,7 @@ export function Reviews() {
         key == counter ? (
           <section
             key={key}
-            className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] xl:w-[675px] lg:h-[269px] lg:m-0"
+            className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] md:w-[300px]lg:w-[675px] xl:w-[675px] lg:h-[269px] lg:m-0"
           >
             <p>{review.review} </p>
             <div className="flex flex-row gap-3">
@@ -85,7 +85,9 @@ export function Reviews() {
           </section>
         ) : null
       )}
-      {/* <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] xl:w-[675px] lg:h-[269px] lg:m-0">
+      {
+        //THIS WAS BEFORE THE DUMMY REVIEWS, MIGHT BE NICE TO HAVE FOR FUTURE REFERANCE
+        /* <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] xl:w-[675px] lg:h-[269px] lg:m-0">
         <p>
           Kan virkelig varmt anbefale Ørjan for de som kjenner at de trenger
           litt "service"! Han har en egen evne til å få koppen på plass og i
@@ -99,7 +101,8 @@ export function Reviews() {
             <li>23. October</li>
           </ul>
         </div>
-      </section> */}
+      </section> */
+      }
     </div>
   );
 }
