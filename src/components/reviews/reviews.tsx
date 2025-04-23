@@ -1,22 +1,40 @@
+import { ArrowLeft, ArrowRight, UserRound } from "lucide-react";
+
 export function Reviews() {
   return (
-    <>
-      <section className="w-[345px] h-[216px]">
-        <h1>Hva sier kundene?</h1>
-        <p>placeholder gibberish</p>
-        <div className="w-[345px] h-[56px] flex flex-row">
-          <button>venstre</button>
-          <button>høyre</button>
+    <div className="bg-white w-full">
+      <section className="text-main-500 mx-5 mt-8">
+        <h1 className="text-[48px]/[110%] font-[600] mb-5">
+          Hva sier kundene?
+        </h1>
+        <p className="text-[16px]/150% font-[400] mb-5">
+          Her får du hjelp til dine akutte og langvarige problemer gjennom
+          manuell behandling som sørger for å minske smerte og gjenskape
+          kroppens naturlige funksjon og bevegelighet. Hos oss får du time kjapt
+          slik at du kommer raskt tilbake fra din skade.
+        </p>
+        <div className="flex justify-between h-[56px] flex flex-row mb-5">
+          <button className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px]">
+            <ArrowLeft size={40} />
+          </button>
+          <button className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px]">
+            <ArrowRight size={40} />
+          </button>
         </div>
       </section>
-      <section className="w-[345px] h-[312px]">
-        <p>review text from customer</p>
+      <section className="w-[345px] h-[312px] bg-main-500 text-white">
+        <p>
+          Kan virkelig varmt anbefale Ørjan for de som kjenner at de trenger
+          litt "service"! Han har en egen evne til å få koppen på plass og i
+          balanse igjen, om det er nakke, rygg, armer eller annet. Her er man i
+          gode hender!
+        </p>
         <div>
-          <img src="" alt="picture" />
-          <p>name</p>
-          <p>date</p>
+          <UserRound />
+          <p>Rosie Luettgen</p>
+          <p>23. October</p>
         </div>
       </section>
-    </>
+    </div>
   );
 }
