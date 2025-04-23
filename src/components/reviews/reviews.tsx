@@ -8,8 +8,8 @@ export function Reviews() {
 
   function handleIncrement() {
     setCounter((prev) => prev + 1);
-    if (counter == reviews.length) {
-      setCounter(reviews.length);
+    if (counter >= reviews.length - 1) {
+      setCounter(reviews.length - 1);
     }
   }
 
@@ -21,6 +21,12 @@ export function Reviews() {
   }
 
   const reviews = [
+    {
+      name: "Rosie Luettgen",
+      date: "23. October",
+      review:
+        "Kan virkelig varmt anbefale Ørjan for de som kjenner at de trenger litt service! Han har en egen evne til å få koppen på plass og i balanse igjen, om det er nakke, rygg, armer eller annet. Her er man i gode hender!",
+    },
     { name: "Timmy Turner", date: "21. Januar", review: "It was great!" },
     {
       name: "John Doe",
@@ -62,7 +68,24 @@ export function Reviews() {
           </button>
         </div>
       </section>
-      <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] xl:w-[675px] lg:h-[269px] lg:m-0">
+      {reviews.map((review, key) =>
+        key == counter ? (
+          <section
+            key={key}
+            className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] xl:w-[675px] lg:h-[269px] lg:m-0"
+          >
+            <p>{review.review} </p>
+            <div className="flex flex-row gap-3">
+              <UserRound size={56} className="border-1 rounded-full" />
+              <ul className="flex flex-col justify-center">
+                <li>{review.name} </li>
+                <li>{review.date} </li>
+              </ul>
+            </div>
+          </section>
+        ) : null
+      )}
+      {/* <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] xl:w-[675px] lg:h-[269px] lg:m-0">
         <p>
           Kan virkelig varmt anbefale Ørjan for de som kjenner at de trenger
           litt "service"! Han har en egen evne til å få koppen på plass og i
@@ -76,7 +99,7 @@ export function Reviews() {
             <li>23. October</li>
           </ul>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
