@@ -7,7 +7,7 @@ export function Reviews() {
         <h1 className="text-[48px]/[110%] font-[600] mb-5">
           Hva sier kundene?
         </h1>
-        <p className="text-[16px]/150% font-[400] mb-5 md:w-[640px]">
+        <p className="text-[16px]/150% font-[400] mb-5 xl:w-[640px]">
           Her får du hjelp til dine akutte og langvarige problemer gjennom
           manuell behandling som sørger for å minske smerte og gjenskape
           kroppens naturlige funksjon og bevegelighet. Hos oss får du time kjapt
@@ -22,7 +22,7 @@ export function Reviews() {
           </button>
         </div>
       </section>
-      <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] md:w-[675px] lg:h-[269px] lg:m-0">
+      <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] xl:w-[675px] lg:h-[269px] lg:m-0">
         <p>
           Kan virkelig varmt anbefale Ørjan for de som kjenner at de trenger
           litt "service"! Han har en egen evne til å få koppen på plass og i
