@@ -22,17 +22,19 @@ export function Reviews() {
           </button>
         </div>
       </section>
-      <section className="w-[345px] h-[312px] bg-main-500 text-white">
+      <section className="flex flex-col justify-between h-[312px] bg-main-500 text-white mx-5 mb-8 p-5 rounded-xl">
         <p>
           Kan virkelig varmt anbefale Ørjan for de som kjenner at de trenger
           litt "service"! Han har en egen evne til å få koppen på plass og i
           balanse igjen, om det er nakke, rygg, armer eller annet. Her er man i
           gode hender!
         </p>
-        <div>
-          <UserRound />
-          <p>Rosie Luettgen</p>
-          <p>23. October</p>
+        <div className="flex flex-row gap-3">
+          <UserRound size={56} className="border-1 rounded-full" />
+          <ul className="flex flex-col justify-center">
+            <li>Rosie Luettgen</li>
+            <li>23. October</li>
+          </ul>
         </div>
       </section>
     </div>
