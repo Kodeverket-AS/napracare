@@ -1,6 +1,4 @@
-import { log } from "console";
 import { ArrowLeft, ArrowRight, UserRound } from "lucide-react";
-import PreviousMap_ from "postcss/lib/previous-map";
 import { useState } from "react";
 
 export function Reviews() {
