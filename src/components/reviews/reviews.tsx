@@ -2,8 +2,8 @@ import { ArrowLeft, ArrowRight, UserRound } from "lucide-react";
 
 export function Reviews() {
   return (
-    <div className="bg-white w-full">
-      <section className="text-main-500 mx-5 mt-8 sm:mx-10 sm:mt-16 ">
+    <div className="flex flex-col bg-white w-full lg:flex-row lg:h-[429px] lg:justify-center lg:items-center lg:px-[96px] lg:gap-10">
+      <section className="text-main-500 mx-5 mt-8 sm:mx-10 sm:mt-16 lg:m-0">
         <h1 className="text-[48px]/[110%] font-[600] mb-5">
           Hva sier kundene?
         </h1>
@@ -14,15 +14,15 @@ export function Reviews() {
           slik at du kommer raskt tilbake fra din skade.
         </p>
         <div className="flex justify-between h-[56px] flex flex-row mb-5 sm:justify-start sm:gap-10">
-          <button className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px]">
+          <button className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500">
             <ArrowLeft size={40} />
           </button>
-          <button className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px]">
+          <button className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500">
             <ArrowRight size={40} />
           </button>
         </div>
       </section>
-      <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] md:w-[675px]">
+      <section className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] md:w-[675px] lg:h-[269px] lg:m-0">
         <p>
           Kan virkelig varmt anbefale Ørjan for de som kjenner at de trenger
           litt "service"! Han har en egen evne til å få koppen på plass og i
