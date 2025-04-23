@@ -1,3 +1,4 @@
+import { log } from "console";
 import { ArrowLeft, ArrowRight, UserRound } from "lucide-react";
 import PreviousMap_ from "postcss/lib/previous-map";
 import { useState } from "react";
@@ -5,10 +6,10 @@ import { useState } from "react";
 export function Reviews() {
   const [counter, setCounter] = useState(0);
 
-  function handleIncrement(i) {
+  function handleIncrement() {
     setCounter((prev) => prev + 1);
-    if (counter >= i) {
-      setCounter(i);
+    if (counter == reviews.length) {
+      setCounter(reviews.length);
     }
   }
 
@@ -47,10 +48,16 @@ export function Reviews() {
           slik at du kommer raskt tilbake fra din skade.
         </p>
         <div className="flex justify-between h-[56px] flex flex-row mb-5 sm:justify-start sm:gap-10">
-          <button className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500 hover:cursor-pointer">
+          <button
+            onClick={handleDecrement}
+            className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500 hover:cursor-pointer"
+          >
             <ArrowLeft size={40} />
           </button>
-          <button className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500 hover:cursor-pointer">
+          <button
+            onClick={handleIncrement}
+            className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500 hover:cursor-pointer"
+          >
             <ArrowRight size={40} />
           </button>
         </div>
