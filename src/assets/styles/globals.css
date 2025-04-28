@@ -44,3 +44,8 @@ main {
     flex: 1;
     @apply container;
 }
+
+.MuiStack-root.css-1sazv7p-MuiStack-root{
+    display: flex;
+    flex-direction: row;
+}
