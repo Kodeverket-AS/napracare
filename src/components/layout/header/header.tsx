@@ -8,7 +8,7 @@ export function Header() {
         <NavBarDesktop />
       </div>
 
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <NavBarMobile />
       </div>
     </header>

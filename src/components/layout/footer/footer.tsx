@@ -2,7 +2,7 @@ import { Facebook, Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="w-full flex flex-col text-center items-center bg-[#333333] py-8 gap-6">
+    <footer className=" text-white w-full flex flex-col text-center items-center bg-[#333333] py-8 gap-6">
       <section className="text-xl">
         <h2>NAPCRACARE</h2>
       </section>
