@@ -132,31 +132,64 @@ export default function ServicesDeskop() {
       </div>
 
       {selectedService && (
-        <Modal open={openModal} onClose={handleClose}>
+        <Modal
+          open={openModal}
+          onClose={handleClose}
+          sx= {{
+              backgroundColor: "rgba(0, 84, 147, 0.2)", 
+          }}
+          
+        >
           <Box
             sx={{
               position: "absolute",
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              backgroundColor: "white",
-              padding: "20px",
-              borderRadius: "8px",
+              backgroundColor: "white", 
+              padding: "32px",
+              borderRadius: "12px",
               boxShadow: 24,
-              maxWidth: "600px",
-              width: "100%",
+              width: "75vw", 
+              maxHeight: "90vh",
+              overflowY: "auto",
             }}
           >
-            <h2 className="text-2xl font-semibold mb-4">
-              {selectedService.header}
-            </h2>
-            <p className="text-gray-700">{selectedService.text}</p>
-            <div className="mt-4">
+            <div className="flex flex-row gap-8">
+          
+              <div className="w-1/2 flex justify-center items-start">
+                <img
+                  src="/nakke.jpg"
+                  alt="Nakke"
+                  className="max-w-full max-h-[600px] object-cover rounded-xl"
+                />
+              </div>
+
+              <div className="w-px bg-gray-300"></div>
+
+         
+              <div className="w-1/2 pl-6">
+                <h2 className="text-3xl font-semibold mb-6">
+                  {selectedService.header}
+                </h2>
+                <p className="text-gray-700 text-base">
+                  {selectedService.text}
+                </p>
+              </div>
+            </div>
+
+        
+            <hr className="my-8 border-gray-300" />
+
+            <div className="flex justify-center items-center gap-6">
               <button
                 onClick={handleClose}
-                className="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600"
+                className="bg-main-500 w-[240px] h-[56px] rounded-[8px] text-white text-lg"
               >
                 Lukk
+              </button>
+              <button className="bg-main-500 w-[240px] h-[56px] rounded-[8px] text-white text-lg">
+                Bestill time
               </button>
             </div>
           </Box>
