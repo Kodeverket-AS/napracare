@@ -132,7 +132,13 @@ export default function ServicesMobile() {
       </div>
 
       {selectedService && (
-        <Modal open={openModal} onClose={handleClose}>
+        <Modal
+          open={openModal}
+          onClose={handleClose}
+          sx={{
+            backgroundColor: "rgba(0, 84, 147, 0.2)", 
+          }}
+        >
           <Box
             sx={{
               position: "absolute",
@@ -141,22 +147,47 @@ export default function ServicesMobile() {
               transform: "translate(-50%, -50%)",
               backgroundColor: "white",
               padding: "20px",
-              borderRadius: "8px",
+              borderRadius: "12px",
               boxShadow: 24,
-              maxWidth: "600px",
-              width: "100%",
+              width: "90vw", 
+              maxHeight: "90vh",
+              overflowY: "auto",
             }}
           >
-            <h2 className="text-2xl font-semibold mb-4">
-              {selectedService.header}
-            </h2>
-            <p className="text-gray-700">{selectedService.text}</p>
-            <div className="mt-4">
+            <div className="flex flex-col gap-6">
+     
+              <div className="w-full flex justify-center">
+                <img
+                  src="/nakke.jpg"
+                  alt="Nakke"
+                  className="w-full max-h-[500px] object-cover rounded-xl"
+                />
+              </div>
+
+              
+              <div>
+                <h2 className="text-2xl font-semibold mb-4 text-justify">
+                  {selectedService.header}
+                </h2>
+                <p className="text-main-500 text-base text-justify p-2">
+                  {selectedService.text}
+                </p>
+              </div>
+            </div>
+
+            {/* Pozioma linia */}
+            <hr className="my-6 border-gray-300" />
+
+            {/* Przyciski (pod sobą na telefonie) */}
+            <div className="flex flex-col gap-4 items-center">
               <button
                 onClick={handleClose}
-                className="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600"
+                className="bg-main-500 w-[80%] h-[48px] rounded-[8px] text-white text-lg"
               >
                 Lukk
+              </button>
+              <button className="bg-main-500 w-[80%] h-[48px] rounded-[8px] text-white text-lg">
+                Bestill time
               </button>
             </div>
           </Box>
