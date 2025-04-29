@@ -41,9 +41,16 @@ export default function Navbar() {
       <div className="container mx-auto  py-6">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
-            <span className="text-4xl font-bold text-dark-primary">
-              NAPRACARE
-            </span>
+            <div
+              className="flex-shrink-0 cursor-pointer"
+              onClick={() => scrollToSection("home")}
+            >
+              <img
+                src="/logo.png"
+                alt="NAPRACARE logo"
+                className="h-32 w-auto"
+              />
+            </div>
           </div>
 
           <div className="hidden md:flex items-center justify-center flex-grow mx-4">
