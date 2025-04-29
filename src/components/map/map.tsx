@@ -6,7 +6,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 export function Map() {
   if (typeof window === "undefined") return <></>;
   return (
-    <div className="flex justify-center  w-full h-[500px]">
+    <div className="flex justify-center w-full h-[500px] my-8">
       <MapContainer
         className="flex w-screen h-full"
         center={[60.388103254544305, 5.332078267107137]}

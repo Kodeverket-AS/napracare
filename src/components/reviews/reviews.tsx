@@ -54,13 +54,13 @@ export function Reviews() {
         <div className="flex justify-between h-[56px] flex flex-row mb-5 sm:justify-start sm:gap-10">
           <button
             onClick={handleDecrement}
-            className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500 hover:cursor-pointer"
+            className="flex justify-center items-center rounded-full  w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500 hover:cursor-pointer"
           >
             <ArrowLeft size={40} />
           </button>
           <button
             onClick={handleIncrement}
-            className="flex justify-center items-center rounded-full shadow-2xl shadow-black w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500 hover:cursor-pointer"
+            className="flex justify-center items-center rounded-full  w-[56px] h-[56px] transition duration-300 ease-out border-1 border-transparent hover:border-main-500 hover:cursor-pointer"
           >
             <ArrowRight size={40} />
           </button>
