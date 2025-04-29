@@ -12,19 +12,15 @@ export default function Home() {
   return (
     <>
       <Hero />
-
+      <Naprapati />
 
       <div className="block lg:hidden">
         <ServicesMobile />
       </div>
 
-    
       <div className="hidden lg:block">
         <ServicesDeskop />
       </div>
-
-
-      <Naprapati/>
 
       <Reviews />
       <Map />

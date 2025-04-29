@@ -37,8 +37,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="top-0 left-0 w-screen bg-white shadow-md z-50">
-      <div className="container mx-auto px-6 py-6">
+    <nav className="top-0 left-0 w-screen  z-50">
+      <div className="container mx-auto  py-6">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <span className="text-4xl font-bold text-dark-primary">
