@@ -108,11 +108,7 @@ export function NavbarMobile() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-base font-medium p-2 transition-colors duration-300 ${
-                  activeSection === item.id
-                    ? "text-dark-primary border-l-4 border-dark-primary pl-3"
-                    : "text-gray-600 hover:text-dark-primary-hover"
-                }`}
+                className={`text-base font-medium text-gray-600`}
               >
                 {item.label}
               </button>
