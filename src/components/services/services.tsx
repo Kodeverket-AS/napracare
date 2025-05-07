@@ -4,12 +4,14 @@ import { ServicesMobile } from "./ServicesMobile";
 export function Services() {
   return (
     <>
-      <div className="hidden lg:block">
-        <ServicesDesktop />
-      </div>
-      <div className="block lg:hidden">
-        <ServicesMobile />
-      </div>
+      <section id="services">
+        <div className="hidden lg:block">
+          <ServicesDesktop />
+        </div>
+        <div className="block lg:hidden">
+          <ServicesMobile />
+        </div>
+      </section>
     </>
   );
 }
