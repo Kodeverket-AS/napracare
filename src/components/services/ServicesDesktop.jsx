@@ -6,20 +6,18 @@ import PaginationItem from "@mui/material/PaginationItem";
 import Stack from "@mui/material/Stack";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
 import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
-
 import { servicesData } from "./servicesData";
 import Link from "next/link";
 import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-export function ServicesMobile() {
+export function ServicesDesktop() {
   const [openModal, setOpenModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const servicesPerPage = 4;
+  const servicesPerPage = 6;
 
   const handleOpen = (service) => {
     setSelectedService(service);
@@ -43,7 +41,7 @@ export function ServicesMobile() {
   );
 
   return (
-    <div className="px-4 my-8 max-w-[1488px] text-main-500">
+    <div className="mx-8 my-8 max-w-[1488px] text-main-500">
       <div className="header mb-12 mt-16">
         <h1 className="text-3xl font-bold mb-4">Tjenester</h1>
         <div className="flex  items-center justify-between">
@@ -77,21 +75,21 @@ export function ServicesMobile() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2">
-        {currentServices.slice(0, 2).map((service, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {currentServices.slice(0, 3).map((service, index) => (
           <div
             key={index}
-            className={`group relative bg-white hover:bg-main-500 hover:text-white hover:rounded-3xl p-6 transition-all duration-300 ease-in-out transform hover:-translate-y-2 ${
-              index < 1 ? "border-r border-gray-300" : ""
+            className={` group relative bg-white hover:bg-main-500 hover:text-white hover:rounded-3xl p-6 transition-all duration-300 ease-in-out transform hover:-translate-y-2 ${
+              index < 2 ? "border-r border-gray-300" : ""
             }`}
           >
-            <div className="absolute top-4 right-4">
+            <div className=" absolute top-4 right-4">
               <Link href="#" onClick={() => handleOpen(service)}>
-                <ArrowOutwardRoundedIcon className="text-main-500  group-hover:border-white group-hover:border-2 group-hover:rounded-full  group-hover:translate-x-1 transition-all duration-300 cursor-pointer" />
+                <ArrowOutwardRoundedIcon className="text-main-500 group-hover:border-white group-hover:border-2 group-hover:rounded-full cursor-pointer group-hover:translate-x-1 transition-all duration-300" />
               </Link>
             </div>
 
-            <div className="mt-10 md:mt-20">
+            <div className="mt-20">
               <h2 className="text-xl font-semibold mb-2">{service.header}</h2>
               <p className="text-base">
                 {service.text.length > 100
@@ -102,25 +100,25 @@ export function ServicesMobile() {
           </div>
         ))}
 
-        <div className="col-span-2 flex justify-center">
-          <div className="w-full h-[1px] bg-gray-300 my-6 mx-auto"></div>
+        <div className="col-span-3">
+          <div className="w-9/10 h-[1px] bg-gray-300 my-6"></div>
         </div>
 
-        {currentServices.slice(2, 4).map((service, index) => (
+        {currentServices.slice(3, 6).map((service, index) => (
           <div
-            key={index + 2}
-            className={`group relative hover:bg-main-500 hover:text-white hover:rounded-3xl p-6 transition-all duration-300 ease-in-out transform hover:-translate-y-2 ${
-              index < 1 ? "border-r border-gray-300" : ""
+            key={index + 3}
+            className={`group relative bg-white hover:bg-main-500 hover:text-white hover:rounded-3xl p-6 transition-all duration-300 ease-in-out transform hover:-translate-y-2 ${
+              index < 2 ? "border-r border-gray-300" : ""
             }`}
           >
             <div className="absolute top-4 right-4">
               <Link href="#" onClick={() => handleOpen(service)}>
-                <ArrowOutwardRoundedIcon className="text-main-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 cursor-pointer" />
+                <ArrowOutwardRoundedIcon className="text-main-500 group-hover:border-white group-hover:border-2 group-hover:rounded-full cursor-pointer group-hover:translate-x-1 transition-all duration-300" />
               </Link>
             </div>
 
-            <div className="mt-10 md:mt-20">
-              <h2 className="text-lg font-semibold mb-2">{service.header}</h2>
+            <div className="mt-20">
+              <h2 className="text-xl font-semibold mb-2">{service.header}</h2>
               <p className="text-base">
                 {service.text.length > 100
                   ? service.text.slice(0, 100) + "..."
@@ -146,45 +144,45 @@ export function ServicesMobile() {
               left: "50%",
               transform: "translate(-50%, -50%)",
               backgroundColor: "white",
-              padding: "20px",
+              padding: "32px",
               borderRadius: "12px",
               boxShadow: 24,
-              width: "90vw",
+              width: "75vw",
               maxHeight: "90vh",
               overflowY: "auto",
             }}
           >
-            <div className="flex flex-col gap-6">
-              <div className="w-full flex justify-center">
+            <div className="flex flex-row gap-8">
+              <div className="w-1/2 flex justify-center items-start">
                 <img
                   src="/nakke.jpg"
                   alt="Nakke"
-                  className="w-full max-h-[500px] object-cover rounded-xl"
+                  className="max-w-full max-h-[600px] object-cover rounded-xl"
                 />
               </div>
 
-              <div>
-                <h2 className="text-2xl font-semibold mb-4 text-justify">
+              <div className="w-px bg-gray-300"></div>
+
+              <div className="w-1/2 pl-6">
+                <h2 className="text-3xl font-semibold mb-6">
                   {selectedService.header}
                 </h2>
-                <p className="text-main-500 text-base text-justify p-2">
+                <p className="text-gray-700 text-base">
                   {selectedService.text}
                 </p>
               </div>
             </div>
 
-            {/* Pozioma linia */}
-            <hr className="my-6 border-gray-300" />
+            <hr className="my-8 border-gray-300" />
 
-            {/* Przyciski (pod sobą na telefonie) */}
-            <div className="flex flex-col gap-4 items-center">
+            <div className="flex justify-center items-center gap-6">
               <button
                 onClick={handleClose}
-                className="bg-main-500 w-[80%] h-[48px] rounded-[8px] text-white text-lg"
+                className="bg-main-500 w-[240px] h-[56px] rounded-[8px] text-white text-lg"
               >
                 Lukk
               </button>
-              <button className="bg-main-500 w-[80%] h-[48px] rounded-[8px] text-white text-lg">
+              <button className="bg-main-500 w-[240px] h-[56px] rounded-[8px] text-white text-lg">
                 Bestill time
               </button>
             </div>
