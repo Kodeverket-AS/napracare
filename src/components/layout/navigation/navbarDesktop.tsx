@@ -64,7 +64,7 @@ export function NavbarDesktop() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-base font-medium text-gray-600 transition duration-150 hover:text-main-500 hover:border-b-2`}
+                  className={`text-base font-medium text-gray-600 transition duration-150 hover:text-main-500 hover:border-b-2 hover:cursor-pointer`}
                 >
                   {item.label}
                 </button>
