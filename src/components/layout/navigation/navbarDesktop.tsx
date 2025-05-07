@@ -56,19 +56,15 @@ export function NavbarDesktop() {
           <div className="hidden md:flex items-center justify-center flex-grow mx-4">
             <div className="flex items-center space-x-8">
               {[
-                { id: "services", label: "Tjenester" },
                 { id: "about", label: "Hva er Naprapati" },
+                { id: "services", label: "Tjenester" },
                 { id: "reviews", label: "Anmeldelser" },
                 { id: "contact", label: "Kontakt" },
               ].map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-base font-medium transition-colors duration-300 ${
-                    activeSection === item.id
-                      ? "text-dark-primary border-b-2 border-dark-primary"
-                      : "text-gray-600 hover:text-dark-primary-hover"
-                  }`}
+                  className={`text-base font-medium text-gray-600 transition duration-150 hover:text-main-500 hover:border-b-2`}
                 >
                   {item.label}
                 </button>
