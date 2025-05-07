@@ -11,7 +11,6 @@ export default function Home() {
       <Hero />
       <Naprapati />
       <Services />
-
       <Reviews />
       <Map />
     </>
