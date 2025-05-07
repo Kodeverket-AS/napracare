@@ -1,14 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import Image from "next/image";
 
 export function NavbarDesktop() {
-  const [activeSection, setActiveSection] = useState("home");
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
     }
   };
 
@@ -25,7 +23,6 @@ export function NavbarDesktop() {
             scrollPosition >= offsetTop &&
             scrollPosition < offsetTop + offsetHeight
           ) {
-            setActiveSection(section);
             break;
           }
         }
@@ -45,9 +42,11 @@ export function NavbarDesktop() {
               className="flex-shrink-0 cursor-pointer"
               onClick={() => scrollToSection("home")}
             >
-              <img
+              <Image
                 src="/logo.png"
                 alt="NAPRACARE logo"
+                width={500}
+                height={500}
                 className="h-32 w-auto"
               />
             </div>

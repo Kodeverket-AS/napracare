@@ -2,14 +2,12 @@
 import { useState, useEffect } from "react";
 
 export function NavbarMobile() {
-  const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
       setIsMenuOpen(false);
     }
   };
@@ -27,7 +25,6 @@ export function NavbarMobile() {
             scrollPosition >= offsetTop &&
             scrollPosition < offsetTop + offsetHeight
           ) {
-            setActiveSection(section);
             break;
           }
         }
