@@ -6,16 +6,14 @@ import PaginationItem from "@mui/material/PaginationItem";
 import Stack from "@mui/material/Stack";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded"; 
+import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 import { servicesData } from "./servicesData";
 import Link from "next/link";
 import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-
-
-export default function ServicesDeskop() {
+export function ServicesDesktop() {
   const [openModal, setOpenModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -135,10 +133,9 @@ export default function ServicesDeskop() {
         <Modal
           open={openModal}
           onClose={handleClose}
-          sx= {{
-              backgroundColor: "rgba(0, 84, 147, 0.2)", 
+          sx={{
+            backgroundColor: "rgba(0, 84, 147, 0.2)",
           }}
-          
         >
           <Box
             sx={{
@@ -146,17 +143,16 @@ export default function ServicesDeskop() {
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              backgroundColor: "white", 
+              backgroundColor: "white",
               padding: "32px",
               borderRadius: "12px",
               boxShadow: 24,
-              width: "75vw", 
+              width: "75vw",
               maxHeight: "90vh",
               overflowY: "auto",
             }}
           >
             <div className="flex flex-row gap-8">
-          
               <div className="w-1/2 flex justify-center items-start">
                 <img
                   src="/nakke.jpg"
@@ -167,7 +163,6 @@ export default function ServicesDeskop() {
 
               <div className="w-px bg-gray-300"></div>
 
-         
               <div className="w-1/2 pl-6">
                 <h2 className="text-3xl font-semibold mb-6">
                   {selectedService.header}
@@ -178,7 +173,6 @@ export default function ServicesDeskop() {
               </div>
             </div>
 
-        
             <hr className="my-8 border-gray-300" />
 
             <div className="flex justify-center items-center gap-6">

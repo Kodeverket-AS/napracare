@@ -15,7 +15,7 @@ import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-export default function ServicesMobile() {
+export function ServicesMobile() {
   const [openModal, setOpenModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -136,7 +136,7 @@ export default function ServicesMobile() {
           open={openModal}
           onClose={handleClose}
           sx={{
-            backgroundColor: "rgba(0, 84, 147, 0.2)", 
+            backgroundColor: "rgba(0, 84, 147, 0.2)",
           }}
         >
           <Box
@@ -149,13 +149,12 @@ export default function ServicesMobile() {
               padding: "20px",
               borderRadius: "12px",
               boxShadow: 24,
-              width: "90vw", 
+              width: "90vw",
               maxHeight: "90vh",
               overflowY: "auto",
             }}
           >
             <div className="flex flex-col gap-6">
-     
               <div className="w-full flex justify-center">
                 <img
                   src="/nakke.jpg"
@@ -164,7 +163,6 @@ export default function ServicesMobile() {
                 />
               </div>
 
-              
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-justify">
                   {selectedService.header}

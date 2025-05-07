@@ -1,14 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import Image from "next/image";
 
-export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("home");
-
+export function NavbarDesktop() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
     }
   };
 
@@ -25,7 +23,6 @@ export default function Navbar() {
             scrollPosition >= offsetTop &&
             scrollPosition < offsetTop + offsetHeight
           ) {
-            setActiveSection(section);
             break;
           }
         }
@@ -45,9 +42,11 @@ export default function Navbar() {
               className="flex-shrink-0 cursor-pointer"
               onClick={() => scrollToSection("home")}
             >
-              <img
+              <Image
                 src="/logo.png"
                 alt="NAPRACARE logo"
+                width={500}
+                height={500}
                 className="h-32 w-auto"
               />
             </div>
@@ -56,19 +55,15 @@ export default function Navbar() {
           <div className="hidden md:flex items-center justify-center flex-grow mx-4">
             <div className="flex items-center space-x-8">
               {[
-                { id: "home", label: "Tjenester" },
                 { id: "about", label: "Hva er Naprapati" },
-                { id: "services", label: "Anmeldelser" },
+                { id: "services", label: "Tjenester" },
+                { id: "reviews", label: "Anmeldelser" },
                 { id: "contact", label: "Kontakt" },
               ].map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-base font-medium transition-colors duration-300 ${
-                    activeSection === item.id
-                      ? "text-dark-primary border-b-2 border-dark-primary"
-                      : "text-gray-600 hover:text-dark-primary-hover"
-                  }`}
+                  className={`text-base font-medium text-gray-600 transition duration-150 hover:text-main-500 hover:border-b-2 hover:cursor-pointer`}
                 >
                   {item.label}
                 </button>

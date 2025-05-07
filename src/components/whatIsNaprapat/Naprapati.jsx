@@ -3,7 +3,10 @@ import { ArrowRight } from "lucide-react";
 
 export function Naprapati() {
   return (
-    <section className="max-w-[1448px] mt-12 flex flex-col  justify-center w-full bg-white text-zinc-700  lg:flex-row items-center">
+    <section
+      id="about"
+      className="max-w-[1448px] mt-12 flex flex-col  justify-center w-full bg-white text-zinc-700  lg:flex-row items-center"
+    >
       <div className="relative w-[400] h-[300px] lg:w-[800px] lg:h-[650px] ">
         <Image
           src="/hva_er_naprapati.jpg"

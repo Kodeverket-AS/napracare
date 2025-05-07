@@ -1,15 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 
-export default function MobileNavbar() {
-  const [activeSection, setActiveSection] = useState("home");
+export function NavbarMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
       setIsMenuOpen(false);
     }
   };
@@ -27,7 +25,6 @@ export default function MobileNavbar() {
             scrollPosition >= offsetTop &&
             scrollPosition < offsetTop + offsetHeight
           ) {
-            setActiveSection(section);
             break;
           }
         }
@@ -100,19 +97,15 @@ export default function MobileNavbar() {
         <div className="fixed w-screen mobile-menu bg-white shadow-md">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
             {[
-              { id: "home", label: "Tjenester" },
+              { id: "services", label: "Tjenester" },
               { id: "about", label: "Hva er Naprapati" },
-              { id: "services", label: "Anmeldelser" },
+              { id: "reviews", label: "Anmeldelser" },
               { id: "contact", label: "Kontakt" },
             ].map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-base font-medium p-2 transition-colors duration-300 ${
-                  activeSection === item.id
-                    ? "text-dark-primary border-l-4 border-dark-primary pl-3"
-                    : "text-gray-600 hover:text-dark-primary-hover"
-                }`}
+                className={`text-base font-medium text-gray-600`}
               >
                 {item.label}
               </button>
