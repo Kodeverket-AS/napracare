@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-export default function Navbar() {
+export function NavbarDesktop() {
   const [activeSection, setActiveSection] = useState("home");
 
   const scrollToSection = (sectionId: string) => {
