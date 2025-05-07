@@ -56,9 +56,9 @@ export function NavbarDesktop() {
           <div className="hidden md:flex items-center justify-center flex-grow mx-4">
             <div className="flex items-center space-x-8">
               {[
-                { id: "home", label: "Tjenester" },
+                { id: "services", label: "Tjenester" },
                 { id: "about", label: "Hva er Naprapati" },
-                { id: "services", label: "Anmeldelser" },
+                { id: "reviews", label: "Anmeldelser" },
                 { id: "contact", label: "Kontakt" },
               ].map((item) => (
                 <button

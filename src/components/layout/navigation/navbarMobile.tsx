@@ -100,9 +100,9 @@ export function NavbarMobile() {
         <div className="fixed w-screen mobile-menu bg-white shadow-md">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
             {[
-              { id: "home", label: "Tjenester" },
+              { id: "services", label: "Tjenester" },
               { id: "about", label: "Hva er Naprapati" },
-              { id: "services", label: "Anmeldelser" },
+              { id: "reviews", label: "Anmeldelser" },
               { id: "contact", label: "Kontakt" },
             ].map((item) => (
               <button
