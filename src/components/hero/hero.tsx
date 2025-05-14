@@ -4,10 +4,10 @@ import { DesktopHero } from "./desktopHero";
 export function Hero() {
   return (
     <>
-      <div className="hidden lg:block">
+      <div className="hidden xl:block">
         <DesktopHero />
       </div>
-      <div className="block lg:hidden">
+      <div className="block xl:hidden">
         <MobileHero />
       </div>
     </>
