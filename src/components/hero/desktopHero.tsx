@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 export function DesktopHero() {
   return (
-    <div className="flex flex-col justify-center items-center bg-white w-screen h-[853px] text-zinc-700">
+    <div className="flex flex-col justify-center items-center bg-white w-[calc(100vw-15px)] h-[853px] text-zinc-700">
       <div className="flex flex-row position absolute">
         <section className="flex justify-center items-center w-[505px]">
           <div>
@@ -31,8 +31,8 @@ export function DesktopHero() {
           </div>
         </section>
       </div>
-      <div className="bg-white w-screen h-[741px]" />
-      <div className="bg-main-500 w-screen h-[112px]" />
+      <div className="bg-white w-full h-[741px]" />
+      <div className="bg-main-500 w-full h-[112px]" />
     </div>
   );
 }
