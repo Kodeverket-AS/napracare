@@ -1,10 +1,37 @@
-import { Facebook, Phone, Mail, MapPin } from "lucide-react";
+"use client";
+
+import { Facebook, Phone, Mail, MapPin, ArrowUpCircle } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function Footer() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
+
   return (
     <footer
       id="contact"
-      className=" text-white w-full flex flex-col text-center items-center bg-[#333333] py-8 gap-6"
+      className="relative text-white w-full flex flex-col text-center items-center bg-main-500 py-8 gap-6"
     >
       <section className="text-xl">
         <h2>NAPCRACARE</h2>
@@ -40,6 +67,16 @@ export function Footer() {
         <p>Utviklet i regnet av Kodeverket Bergen</p>
         <p>@ 2025</p>
       </section>
+
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-5 right-5 p-3 bg-main-400 hover:bg-main-300 text-white rounded-full shadow-lg transition-opacity duration-300 ease-in-out focus:outline-none"
+          aria-label="jump to top "
+        >
+          <ArrowUpCircle size={28} />
+        </button>
+      )}
     </footer>
   );
 }

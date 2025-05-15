@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export function NavbarDesktop() {
   const scrollToSection = (sectionId: string) => {
@@ -71,11 +72,13 @@ export function NavbarDesktop() {
             </div>
           </div>
 
-          <div className="flex-shrink-0">
-            <button className="bg-dark-primary hover:bg-dark-primary-hover text-white font-medium py-2 px-6 rounded-md transition-colors duration-300">
-              Bestill time
-            </button>
-          </div>
+     
+           <button 
+          className="flex justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 w-full max-w-[320px] sm:max-w-[188px] h-[56px] mx-auto mt-8 mb-[40px] rounded-[8px] text-white text-lg cursor-pointer"
+        >
+          Bestill time <ArrowRight />
+        </button>
+          
         </div>
       </div>
     </nav>

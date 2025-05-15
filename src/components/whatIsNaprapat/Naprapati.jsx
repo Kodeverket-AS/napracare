@@ -17,9 +17,9 @@ export function Naprapati() {
           />
         </div>
       </div>
-      <div className="lg:w-1/2 w-full text-justify flex flex-col p-4 lg:p-8">
-        <h1 className="mt-8 lg:mt-0 text-2xl">Hva er naprapati?</h1>
-        <p className="mt-3 flex-grow">
+      <div className="lg:w-1/2 w-full text-justify flex flex-col p-4 ">
+        <h1 className=" lg:mt-0 text-[48px] font-DMSans text-main-500 font-semibold ">Hva er naprapati?</h1>
+        <p className="mt-3 flex-grow text-dark-text">
           Behandlingen bygger på ortopedisk medisin kombinert med god kunnskap
           om bevegelsesapparatets oppbygning og funksjon. Denne tanken ligger
           til grunn for naprapatien og kan betegnes som selve kjernen. Ordet
@@ -39,7 +39,7 @@ export function Naprapati() {
           hatt sitt eget diagnostiske system og egne behandlingsteknikker.
         </p>
         <button 
-          className="flex justify-center items-center gap-[16px] bg-main-500 w-full max-w-[320px] sm:max-w-[188px] h-[56px] mx-auto mt-8 mb-[40px] rounded-[8px] text-white text-lg"
+          className="flex justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 w-full max-w-[320px] sm:max-w-[188px] h-[56px] mx-auto mt-8 mb-[40px] rounded-[8px] text-white text-lg cursor-pointer"
         >
           Bestill time <ArrowRight />
         </button>
