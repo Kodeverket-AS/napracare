@@ -13,7 +13,7 @@ import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-export function ServicesDesktop() {
+export default function ServicesDesktop() {
   const [openModal, setOpenModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);

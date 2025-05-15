@@ -3,7 +3,8 @@ import { Hero } from "@/components/hero/hero";
 import { Reviews } from "@/components/reviews/reviews";
 import { Map } from "@/components/map";
 import { Naprapati } from "@/components/whatIsNaprapat/Naprapati";
-import { Services } from "@/components/services/services";
+import Services from "@/components/services/services";
+import ContactForm from "@/components/contactForm";
 
 export default function Home() {
   return (
@@ -12,7 +13,14 @@ export default function Home() {
       <Naprapati />
       <Services />
       <Reviews />
-      <Map />
+      <div className="flex flex-col lg:flex-row w-full px-4 lg:px-8 gap-8 mb-4 max-w-[1448px] mx-auto">
+        <div className="w-full lg:w-1/2">
+          <ContactForm />
+        </div>
+        <div className="w-full lg:w-1/2">
+          <Map />
+        </div>
+      </div>
     </>
   );
 }
