@@ -34,8 +34,8 @@ export function NavbarDesktop() {
   }, []);
 
   return (
-    <nav className="top-0 left-0 w-screen  z-50">
-      <div className="container mx-auto  py-6">
+    <nav className="top-0 left-0 w-full  z-50">
+      <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <div

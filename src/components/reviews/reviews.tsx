@@ -48,7 +48,7 @@ export function Reviews() {
         <h1 className="text-[48px]/[110%] font-[600] mb-5">
           Hva sier kundene?
         </h1>
-        <p className="text-[16px]/150% font-[400] mb-5 xl:w-[640px]">
+        <p className="text-[16px]/150% font-[400] mb-5 pr-6 xl:w-[640px]">
           Her får du hjelp til dine akutte og langvarige problemer gjennom
           manuell behandling som sørger for å minske smerte og gjenskape
           kroppens naturlige funksjon og bevegelighet. Hos oss får du time kjapt
