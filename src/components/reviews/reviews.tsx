@@ -45,7 +45,7 @@ export function Reviews() {
       className="flex flex-col bg-white w-full lg:flex-row lg:h-[429px] lg:justify-center lg:items-center lg:px-[96px] lg:gap-10"
     >
       <section className="text-main-500 mx-5 mt-8 sm:mx-10 sm:mt-16 lg:m-0">
-        <h1 className="text-[48px]/[110%] font-[600] mb-5">
+        <h1 className="mt-8 lg:mt-0 text-[48px] font-DMSans text-main-500 font-semibold">
           Hva sier kundene?
         </h1>
         <p className="text-[16px]/150% font-[400] mb-5 xl:w-[640px]">

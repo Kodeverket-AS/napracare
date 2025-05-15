@@ -15,7 +15,7 @@ import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-export function ServicesMobile() {
+export default function ServicesMobile() {
   const [openModal, setOpenModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -43,7 +43,7 @@ export function ServicesMobile() {
   );
 
   return (
-    <div className="px-4 my-8 max-w-[1488px] text-main-500">
+    <div className="px-4 my-8 mx-4 max-w-[1488px] text-main-500">
       <div className="header mb-12 mt-16">
         <h1 className="text-3xl font-bold mb-4">Tjenester</h1>
         <div className="flex  items-center justify-between">
