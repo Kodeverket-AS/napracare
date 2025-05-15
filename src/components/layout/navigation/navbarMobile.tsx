@@ -51,7 +51,7 @@ export function NavbarMobile() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="top-0 left-0 w-screen bg-white shadow-md z-50 md:hidden">
+    <nav className="top-0 left-0 w-full bg-white shadow-md z-50 md:hidden">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
