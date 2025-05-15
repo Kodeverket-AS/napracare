@@ -1,6 +1,6 @@
-import { Metadata } from "next";
+import {type Metadata } from "next";
 import "@/assets/styles/globals.css";
-import { Header } from "@/components/layout/header/header";
+
 import { Footer } from "@/components/layout/footer/footer";
 import { Navbar } from "@/components/layout/navigation/navbar";
 
