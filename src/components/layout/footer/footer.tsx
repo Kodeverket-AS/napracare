@@ -31,10 +31,10 @@ export function Footer() {
   return (
     <footer
       id="contact"
-      className="relative text-white w-full flex flex-col text-center items-center bg-main-500 py-8 gap-6"
+      className="relative text-white w-full flex flex-col text-center items-center bg-main-500 py-8 gap-8"
     >
-      <section className="text-xl">
-        <h2>NAPCRACARE</h2>
+      <section className="text-3xl font-DMSans font-semibold my-4 ">
+        <h2>NAPRACARE</h2>
       </section>
       <section className=" flex flex-col gap-6 items-center lg:flex-row-reverse">
         <div className=" flex flex-row gap-1">

@@ -13,7 +13,7 @@ export default function Home() {
       <Naprapati />
       <Services />
       <Reviews />
-      <div className="flex flex-col lg:flex-row w-full px-4 lg:px-8 gap-8 mb-4 max-w-[1448px] mx-auto">
+      <div id="contact" className="flex flex-col lg:flex-row w-full px-4 lg:px-8 gap-8 mb-4 max-w-[1448px] mx-auto">
         <div className="w-full lg:w-1/2">
           <ContactForm />
         </div>
