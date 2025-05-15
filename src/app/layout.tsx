@@ -1,11 +1,9 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import "@/assets/styles/globals.css";
 import { Header } from "@/components/layout/header/header";
 import { Footer } from "@/components/layout/footer/footer";
 
-
-
-export const metadata = {
+export const metadata: Metadata = {
   title: 'NapraCare – Naprapatklinikkvest Ørjan Bask',
   description: 'Profesjonell behandling av muskel- og leddsmerter i Voss. Naprapat Ørjan Bask tilbyr effektiv manuell terapi, massasje og rehabilitering.',
   keywords: [
@@ -14,6 +12,11 @@ export const metadata = {
   ],
   authors: [{ name: 'Ørjan Bask', url: 'https://napracare.no' }],
   metadataBase: new URL('https://napracare.no'),
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+  },
   openGraph: {
     title: 'NapraCare – Naprapatklinikkvest Ørjan Bask',
     description: 'Få profesjonell hjelp med smerter i muskler og ledd. Ørjan Bask tilbyr naprapati, massasje og rehabilitering i Bergen.',
@@ -21,26 +24,16 @@ export const metadata = {
     siteName: 'NapraCare',
     locale: 'nb_NO',
     type: 'website',
-    robots: {
-  index: true,
-  follow: true,
-  nocache: false,
-},
     images: [
       {
         url: '/logo.png',
         width: 1200,
         height: 630,
-        alt: 'NapraCare-Naprapatklinikkvest Ørjan Bask',
+        alt: 'NapraCare – Naprapatklinikkvest Ørjan Bask',
       },
     ],
   },
 };
-
-
-
-
-
 
 export default function RootLayout({
   children,
@@ -48,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="nb">
       <body>
         <Header />
         {children}
