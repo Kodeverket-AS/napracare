@@ -24,7 +24,7 @@ export function MobileHero() {
           height={648}
           alt="doctor with crossed arms"
         />
-        <div className="w-screen h-[549px]"></div>
+        <div className="w-full h-[549px]"></div>
         <div className="bg-main-500 w-screen h-[112px]"></div>
       </section>
     </div>
