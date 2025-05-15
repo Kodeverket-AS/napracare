@@ -5,7 +5,7 @@ export function MobileHero() {
     <div className="bg-white w-[calc(100vw-15px)]">
       <section className="flex justify-center items-center text-zinc-700">
         <div className="w-[360px] sm:w-[640px] gap-[24px]">
-          <h2 className="text-[56px]/[110%] font-[600] mx-5 mt-5 mb-[24px]">
+          <h2 className="text-[56px]/[110%] font-[600] mx-6 mt-5 mb-[24px]">
             Vi lindrer smertene dine på en profesjonell måte
           </h2>
           <p className="max-w-[360px] text-[32px]/[120%] font-[500] mx-6 mb-[36px]">

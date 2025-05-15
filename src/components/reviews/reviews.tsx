@@ -44,7 +44,7 @@ export function Reviews() {
       id="reviews"
       className="flex flex-col bg-white w-full lg:flex-row lg:h-[429px] lg:justify-between lg:items-center"
     >
-      <section className="text-main-500 mt-8 sm:mx-10 sm:mt-16 lg:m-0">
+      <section className="text-main-500 mt-8 sm:mt-16 lg:m-0">
         <h1 className="text-[48px]/[110%] font-[600] mb-5">
           Hva sier kundene?
         </h1>
@@ -73,7 +73,7 @@ export function Reviews() {
         key == counter ? (
           <section
             key={key}
-            className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mx-5 mb-20 p-5 rounded-xl sm:mx-10 sm:min-h-[240px] md:w-[300px]lg:w-[675px] xl:w-[675px] lg:h-[269px] lg:m-0"
+            className="flex flex-col justify-between min-h-[312px] bg-main-500 text-white mt-10 mb-20 p-5 rounded-xl  sm:min-h-[240px] lg:min-w-1/2 xl:w-[675px] lg:h-[269px]"
           >
             <p>{review.review} </p>
             <div className="flex flex-row gap-3">
