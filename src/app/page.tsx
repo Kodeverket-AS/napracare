@@ -12,7 +12,7 @@ export default function Home() {
       <div className="w-full container mx-auto px-8">
         <Services />
       </div>
-
+      <Naprapati />
       <div className="w-full container mx-auto px-8">
         <Reviews />
       </div>
