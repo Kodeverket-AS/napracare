@@ -8,7 +8,6 @@ export function Hero() {
       <div className="hidden xl:block">
         <DesktopHero />
       </div>
-      <Naprapati />
       <div className="block xl:hidden">
         <MobileHero />
       </div>
