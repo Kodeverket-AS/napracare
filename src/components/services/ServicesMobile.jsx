@@ -43,10 +43,10 @@ export function ServicesMobile() {
   );
 
   return (
-    <div className="px-4 my-8 max-w-[1488px] text-main-500">
+    <div className="my-8 max-w-[1488px] text-main-500">
       <div className="header mb-12 mt-16">
         <h1 className="text-3xl font-bold mb-4">Tjenester</h1>
-        <div className="flex  items-center justify-between">
+        <div className="flex flex-col justify-between">
           <h2 className="max-w-8/10 text-xl mb-4 md:mb-0">
             Her får du hjelp til dine akutte og langvarige problemer gjennom
             manuell behandling som sørger for å minske smerte og gjenskape
