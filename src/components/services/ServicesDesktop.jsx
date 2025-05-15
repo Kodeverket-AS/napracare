@@ -43,9 +43,9 @@ export default function ServicesDesktop() {
   return (
     <div className="mx-8 my-8 max-w-[1488px] text-main-500">
       <div className="header mb-12 mt-16">
-        <h1 className="text-3xl font-bold mb-4">Tjenester</h1>
+        <h1 className="mt-8 lg:mt-0 text-[48px] font-DMSans text-main-500 font-semibold">Tjenester</h1>
         <div className="flex  items-center justify-between">
-          <h2 className="max-w-8/10 text-xl mb-4 md:mb-0">
+          <h2 className="max-w-8/10  text-main-500 text-base font-normal mb-4 md:mb-0">
             Her får du hjelp til dine akutte og langvarige problemer gjennom
             manuell behandling som sørger for å minske smerte og gjenskape
             kroppens naturlige funksjon og bevegelighet. Hos oss får du time
@@ -90,8 +90,8 @@ export default function ServicesDesktop() {
             </div>
 
             <div className="mt-20">
-              <h2 className="text-xl font-semibold mb-2">{service.header}</h2>
-              <p className="text-base">
+              <h2 className="text-3xl font-medium font-DMSans mb-2">{service.header}</h2>
+              <p className="text-base  text-dark-text group-hover:text-white">
                 {service.text.length > 100
                   ? service.text.slice(0, 100) + "..."
                   : service.text}
@@ -118,8 +118,8 @@ export default function ServicesDesktop() {
             </div>
 
             <div className="mt-20">
-              <h2 className="text-xl font-semibold mb-2">{service.header}</h2>
-              <p className="text-base">
+              <h2 className="text-3xl font-medium font-DMSans mb-2">{service.header}</h2>
+              <p className="text-base  text-dark-text group-hover:text-white">
                 {service.text.length > 100
                   ? service.text.slice(0, 100) + "..."
                   : service.text}

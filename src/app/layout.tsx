@@ -2,10 +2,45 @@ import type { Metadata } from "next";
 import "@/assets/styles/globals.css";
 import { Header } from "@/components/layout/header/header";
 import { Footer } from "@/components/layout/footer/footer";
-export const metadata: Metadata = {
-  title: "Tempalte page",
-  description: "Kodeverket sin NextJS template",
+
+
+
+export const metadata = {
+  title: 'NapraCare – Naprapatklinikkvest Ørjan Bask',
+  description: 'Profesjonell behandling av muskel- og leddsmerter i Voss. Naprapat Ørjan Bask tilbyr effektiv manuell terapi, massasje og rehabilitering.',
+  keywords: [
+    'naprapat', 'Voss', 'manuell terapi', 'massasje', 'ryggsmerter', 
+    'rehabilitering', 'Ørjan Bask', 'Naprapatklinikkvest', 'NapraCare'
+  ],
+  authors: [{ name: 'Ørjan Bask', url: 'https://napracare.no' }],
+  metadataBase: new URL('https://napracare.no'),
+  openGraph: {
+    title: 'NapraCare – Naprapatklinikkvest Ørjan Bask',
+    description: 'Få profesjonell hjelp med smerter i muskler og ledd. Ørjan Bask tilbyr naprapati, massasje og rehabilitering i Bergen.',
+    url: 'https://napracare.no',
+    siteName: 'NapraCare',
+    locale: 'nb_NO',
+    type: 'website',
+    robots: {
+  index: true,
+  follow: true,
+  nocache: false,
+},
+    images: [
+      {
+        url: '/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'NapraCare-Naprapatklinikkvest Ørjan Bask',
+      },
+    ],
+  },
 };
+
+
+
+
+
 
 export default function RootLayout({
   children,
