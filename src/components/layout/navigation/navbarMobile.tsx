@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { ArrowRight } from "lucide-react";
 
 export function NavbarMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,7 +58,6 @@ export function NavbarMobile() {
           <div className="flex-shrink-0">
             <span className="text-3xl font-bold text-text-dark">NAPRACARE</span>
           </div>
-
           <div className="flex items-center gap-4">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
