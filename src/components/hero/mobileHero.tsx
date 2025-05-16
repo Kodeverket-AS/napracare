@@ -8,8 +8,8 @@ export function MobileHero() {
           <h2 className="text-[56px]/[110%] font-[600] mx-6 mt-5 mb-[24px]">
             Vi lindrer smertene dine på en profesjonell måte
           </h2>
-          <p className="max-w-[360px] text-3xl mx-6 font-medium md:text-center mb-[36px]">
-            Veien til helse starter her - registrer deg nå.
+          <p className="max-w-[360px] text-3xl mx-6 font-medium mb-[36px]">
+            Veien til helse starter her <br />- registrer deg nå.
           </p>
           <button
             className="flex justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 
