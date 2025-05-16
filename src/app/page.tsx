@@ -14,7 +14,6 @@ export default function Home() {
         <Services />
       </div>
       <Naprapati />
-      <Services />
       <div className="w-full container mx-auto px-8">
         <Reviews />
       </div>
