@@ -1,7 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { ArrowRight } from "lucide-react";
-
 
 export function NavbarMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,25 +51,14 @@ export function NavbarMobile() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="top-0 left-0 w-screen bg-white shadow-md z-50 md:hidden mt-4 overflow-x-hidden">
+    <nav className="w-full">
       <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
-          
+        <div className="flex w-full items-center justify-between">
+          {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-3xl font-bold text-text-dark">
-              NAPRACARE
-            </span>
+            <span className="text-3xl font-bold text-text-dark">NAPRACARE</span>
           </div>
-
-         
-          <div className="flex items-center gap-4"> 
-            <button 
-              className="flex justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 w-auto max-w-[320px]
-               sm:max-w-[188px] h-[40px] p-5 rounded-md text-white  cursor-pointer" 
-             
-            >
-              Bestill time <ArrowRight size={16} /> 
-            </button>
+          <div className="flex items-center gap-4">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 focus:outline-none"
@@ -101,13 +88,13 @@ export function NavbarMobile() {
                 )}
               </svg>
             </button>
-          </div> 
+          </div>
         </div>
       </div>
 
       {isMenuOpen && (
         <div className="fixed w-screen mobile-menu bg-white shadow-md">
-          <div className="container mx-auto px-4 py-3 font-DMSansflex flex-col space-y-4">
+          <div className="container mx-auto px-4 py-3 font-DMSans flex flex-col space-y-4">
             {[
               { id: "services", label: "Tjenester" },
               { id: "about", label: "Hva er Naprapati" },

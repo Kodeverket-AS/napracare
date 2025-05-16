@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 
 export function NavbarDesktop() {
   const scrollToSection = (sectionId: string) => {
@@ -35,8 +34,8 @@ export function NavbarDesktop() {
   }, []);
 
   return (
-    <nav className="top-0 left-0 w-screen max-w-[1448px] mx-auto py-4">
-      <div className=" mx-auto  py-6">
+    <nav className="top-0 left-0 w-screen  z-50">
+      <div className="container mx-auto  py-6">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <div
@@ -56,8 +55,8 @@ export function NavbarDesktop() {
           <div className="hidden md:flex items-center justify-center flex-grow mx-4">
             <div className="flex font-DMSans items-center space-x-8">
               {[
-                { id: "about", label: "Hva er Naprapati" },
                 { id: "services", label: "Tjenester" },
+                { id: "about", label: "Hva er Naprapati" },
                 { id: "reviews", label: "Anmeldelser" },
                 { id: "contact", label: "Kontakt" },
               ].map((item) => (
@@ -71,14 +70,6 @@ export function NavbarDesktop() {
               ))}
             </div>
           </div>
-
-     
-           <button 
-          className="flex mr-4 justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 w-full max-w-[320px] sm:max-w-[188px] h-[56px] mx-auto mt-8 mb-[40px] rounded-[8px] text-white text-lg cursor-pointer"
-        >
-          Bestill time <ArrowRight />
-        </button>
-          
         </div>
       </div>
     </nav>

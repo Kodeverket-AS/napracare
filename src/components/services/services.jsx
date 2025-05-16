@@ -1,7 +1,7 @@
-import ServicesDesktop  from "./ServicesDesktop";
-import  ServicesMobile  from "./ServicesMobile";
+import ServicesDesktop from "./ServicesDesktop";
+import ServicesMobile from "./ServicesMobile";
 
-export default function Services() {
+export function Services() {
   return (
     <section id="services">
       <div className="hidden lg:block">
