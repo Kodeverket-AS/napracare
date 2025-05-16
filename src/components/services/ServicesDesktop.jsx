@@ -6,16 +6,14 @@ import PaginationItem from "@mui/material/PaginationItem";
 import Stack from "@mui/material/Stack";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded"; 
+import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 import { servicesData } from "./servicesData";
 import Link from "next/link";
 import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-
-
-export default function ServicesDeskop() {
+export default function ServicesDesktop() {
   const [openModal, setOpenModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -43,11 +41,11 @@ export default function ServicesDeskop() {
   );
 
   return (
-    <div className="mx-8 my-8 max-w-[1488px] text-main-500">
+    <div className=" my-8 max-w-[1488px] text-main-500">
       <div className="header mb-12 mt-16">
-        <h1 className="text-3xl font-bold mb-4">Tjenester</h1>
+        <h1 className="mt-8 lg:mt-0 text-[48px] font-DMSans text-main-500 font-semibold">Tjenester</h1>
         <div className="flex  items-center justify-between">
-          <h2 className="max-w-8/10 text-xl mb-4 md:mb-0">
+          <h2 className="max-w-8/10  text-main-500 text-base font-normal mb-4 md:mb-0">
             Her får du hjelp til dine akutte og langvarige problemer gjennom
             manuell behandling som sørger for å minske smerte og gjenskape
             kroppens naturlige funksjon og bevegelighet. Hos oss får du time
@@ -92,8 +90,8 @@ export default function ServicesDeskop() {
             </div>
 
             <div className="mt-20">
-              <h2 className="text-xl font-semibold mb-2">{service.header}</h2>
-              <p className="text-base">
+              <h2 className="text-3xl font-medium font-DMSans mb-2">{service.header}</h2>
+              <p className="text-base  text-dark-text group-hover:text-white">
                 {service.text.length > 100
                   ? service.text.slice(0, 100) + "..."
                   : service.text}
@@ -120,8 +118,8 @@ export default function ServicesDeskop() {
             </div>
 
             <div className="mt-20">
-              <h2 className="text-xl font-semibold mb-2">{service.header}</h2>
-              <p className="text-base">
+              <h2 className="text-3xl font-medium font-DMSans mb-2">{service.header}</h2>
+              <p className="text-base  text-dark-text group-hover:text-white">
                 {service.text.length > 100
                   ? service.text.slice(0, 100) + "..."
                   : service.text}
@@ -135,10 +133,9 @@ export default function ServicesDeskop() {
         <Modal
           open={openModal}
           onClose={handleClose}
-          sx= {{
-              backgroundColor: "rgba(0, 84, 147, 0.2)", 
+          sx={{
+            backgroundColor: "rgba(0, 84, 147, 0.2)",
           }}
-          
         >
           <Box
             sx={{
@@ -146,17 +143,16 @@ export default function ServicesDeskop() {
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              backgroundColor: "white", 
+              backgroundColor: "white",
               padding: "32px",
               borderRadius: "12px",
               boxShadow: 24,
-              width: "75vw", 
+              width: "75vw",
               maxHeight: "90vh",
               overflowY: "auto",
             }}
           >
             <div className="flex flex-row gap-8">
-          
               <div className="w-1/2 flex justify-center items-start">
                 <img
                   src="/nakke.jpg"
@@ -167,7 +163,6 @@ export default function ServicesDeskop() {
 
               <div className="w-px bg-gray-300"></div>
 
-         
               <div className="w-1/2 pl-6">
                 <h2 className="text-3xl font-semibold mb-6">
                   {selectedService.header}
@@ -178,7 +173,6 @@ export default function ServicesDeskop() {
               </div>
             </div>
 
-        
             <hr className="my-8 border-gray-300" />
 
             <div className="flex justify-center items-center gap-6">

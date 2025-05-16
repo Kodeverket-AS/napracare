@@ -1,16 +1,9 @@
-import NavBarDesktop from "@/components/layout/navigation/desktop/navbar";
-import NavBarMobile from "@/components/layout/navigation/mobile/navbar";
+import { Navbar } from "../navigation/navbar";
 
 export function Header() {
   return (
     <header>
-      <div className="hidden md:block">
-        <NavBarDesktop />
-      </div>
-
-      <div className="block lg:hidden">
-        <NavBarMobile />
-      </div>
+      <Navbar />
     </header>
   );
 }

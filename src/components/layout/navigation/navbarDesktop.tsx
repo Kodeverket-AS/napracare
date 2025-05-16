@@ -1,14 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import Image from "next/image";
 
-export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("home");
-
+export function NavbarDesktop() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
     }
   };
 
@@ -25,7 +23,6 @@ export default function Navbar() {
             scrollPosition >= offsetTop &&
             scrollPosition < offsetTop + offsetHeight
           ) {
-            setActiveSection(section);
             break;
           }
         }
@@ -45,41 +42,33 @@ export default function Navbar() {
               className="flex-shrink-0 cursor-pointer"
               onClick={() => scrollToSection("home")}
             >
-              <img
+              <Image
                 src="/logo.png"
                 alt="NAPRACARE logo"
+                width={500}
+                height={500}
                 className="h-32 w-auto"
               />
             </div>
           </div>
 
           <div className="hidden md:flex items-center justify-center flex-grow mx-4">
-            <div className="flex items-center space-x-8">
+            <div className="flex font-DMSans items-center space-x-8">
               {[
-                { id: "home", label: "Tjenester" },
+                { id: "services", label: "Tjenester" },
                 { id: "about", label: "Hva er Naprapati" },
-                { id: "services", label: "Anmeldelser" },
+                { id: "reviews", label: "Anmeldelser" },
                 { id: "contact", label: "Kontakt" },
               ].map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-base font-medium transition-colors duration-300 ${
-                    activeSection === item.id
-                      ? "text-dark-primary border-b-2 border-dark-primary"
-                      : "text-gray-600 hover:text-dark-primary-hover"
-                  }`}
+                  className={`text-base lg:text-xl font-medium text-text-dark transition duration-150 hover:text-main-500 hover:border-b-2 hover:cursor-pointer`}
                 >
                   {item.label}
                 </button>
               ))}
             </div>
-          </div>
-
-          <div className="flex-shrink-0">
-            <button className="bg-dark-primary hover:bg-dark-primary-hover text-white font-medium py-2 px-6 rounded-md transition-colors duration-300">
-              Bestill time
-            </button>
           </div>
         </div>
       </div>

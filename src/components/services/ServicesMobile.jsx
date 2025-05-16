@@ -43,10 +43,10 @@ export default function ServicesMobile() {
   );
 
   return (
-    <div className="px-4 my-8 max-w-[1488px] text-main-500">
+    <div className="my-8 max-w-[1488px] text-main-500">
       <div className="header mb-12 mt-16">
         <h1 className="text-3xl font-bold mb-4">Tjenester</h1>
-        <div className="flex  items-center justify-between">
+        <div className="flex flex-col justify-between">
           <h2 className="max-w-8/10 text-xl mb-4 md:mb-0">
             Her får du hjelp til dine akutte og langvarige problemer gjennom
             manuell behandling som sørger for å minske smerte og gjenskape
@@ -92,8 +92,10 @@ export default function ServicesMobile() {
             </div>
 
             <div className="mt-10 md:mt-20">
-              <h2 className="text-xl font-semibold mb-2">{service.header}</h2>
-              <p className="text-base">
+              <h2 className="text-2xl font-medium font-DMSans mb-8">
+                {service.header}
+              </h2>
+              <p className="text-base text-dark-text group-hover:text-white ">
                 {service.text.length > 100
                   ? service.text.slice(0, 100) + "..."
                   : service.text}
@@ -120,8 +122,10 @@ export default function ServicesMobile() {
             </div>
 
             <div className="mt-10 md:mt-20">
-              <h2 className="text-lg font-semibold mb-2">{service.header}</h2>
-              <p className="text-base">
+              <h2 className="text-2xl font-medium font-DMSans mb-8">
+                {service.header}
+              </h2>
+              <p className="text-base text-dark-text group-hover:text-white">
                 {service.text.length > 100
                   ? service.text.slice(0, 100) + "..."
                   : service.text}
@@ -136,7 +140,7 @@ export default function ServicesMobile() {
           open={openModal}
           onClose={handleClose}
           sx={{
-            backgroundColor: "rgba(0, 84, 147, 0.2)", 
+            backgroundColor: "rgba(0, 84, 147, 0.2)",
           }}
         >
           <Box
@@ -149,13 +153,12 @@ export default function ServicesMobile() {
               padding: "20px",
               borderRadius: "12px",
               boxShadow: 24,
-              width: "90vw", 
+              width: "90vw",
               maxHeight: "90vh",
               overflowY: "auto",
             }}
           >
             <div className="flex flex-col gap-6">
-     
               <div className="w-full flex justify-center">
                 <img
                   src="/nakke.jpg"
@@ -164,7 +167,6 @@ export default function ServicesMobile() {
                 />
               </div>
 
-              
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-justify">
                   {selectedService.header}
@@ -175,10 +177,8 @@ export default function ServicesMobile() {
               </div>
             </div>
 
-            {/* Pozioma linia */}
             <hr className="my-6 border-gray-300" />
 
-            {/* Przyciski (pod sobą na telefonie) */}
             <div className="flex flex-col gap-4 items-center">
               <button
                 onClick={handleClose}

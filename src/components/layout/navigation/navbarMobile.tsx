@@ -1,15 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 
-export default function MobileNavbar() {
-  const [activeSection, setActiveSection] = useState("home");
+export function NavbarMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
       setIsMenuOpen(false);
     }
   };
@@ -27,7 +25,6 @@ export default function MobileNavbar() {
             scrollPosition >= offsetTop &&
             scrollPosition < offsetTop + offsetHeight
           ) {
-            setActiveSection(section);
             break;
           }
         }
@@ -54,65 +51,60 @@ export default function MobileNavbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="top-0 left-0 w-screen bg-white shadow-md z-50 md:hidden">
+    <nav className="w-full">
       <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
+        <div className="flex w-full items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-3xl font-bold text-dark-primary">
-              NAPRACARE
-            </span>
+            <span className="text-3xl font-bold text-text-dark">NAPRACARE</span>
           </div>
-
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 focus:outline-none"
-            aria-label="Menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-dark-primary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 focus:outline-none"
+              aria-label="Menu"
             >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-dark-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
       {isMenuOpen && (
         <div className="fixed w-screen mobile-menu bg-white shadow-md">
-          <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
+          <div className="container mx-auto px-4 py-3 font-DMSans flex flex-col space-y-4">
             {[
-              { id: "home", label: "Tjenester" },
+              { id: "services", label: "Tjenester" },
               { id: "about", label: "Hva er Naprapati" },
-              { id: "services", label: "Anmeldelser" },
+              { id: "reviews", label: "Anmeldelser" },
               { id: "contact", label: "Kontakt" },
             ].map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-base font-medium p-2 transition-colors duration-300 ${
-                  activeSection === item.id
-                    ? "text-dark-primary border-l-4 border-dark-primary pl-3"
-                    : "text-gray-600 hover:text-dark-primary-hover"
-                }`}
+                className={`text-base font-medium text-gray-600`}
               >
                 {item.label}
               </button>
