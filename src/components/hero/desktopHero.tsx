@@ -9,7 +9,11 @@ export function DesktopHero() {
             <h2 className="text-[56px]/[110%] font-[600]  mt-5 mb-[24px]">
               Vi lindrer smertene dine på en profesjonell måte
             </h2>
+<<<<<<< HEAD
             <button className="flex justify-center items-center gap-[16px] bg-main-500 w-[320px] h-[56px] mb-[40px] rounded-[8px] text-white text-lg sm:w-[188px]">
+=======
+            <button className="flex justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 cursor-pointer w-[320px] h-[56px] mx-5 mb-[40px] rounded-[8px] text-white text-lg sm:w-[188px]">
+>>>>>>> origin/development
               Bestill time <ArrowRight />
             </button>
           </div>

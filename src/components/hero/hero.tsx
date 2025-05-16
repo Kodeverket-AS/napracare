@@ -5,10 +5,10 @@ import { Naprapati } from "../whatIsNaprapat/Naprapati";
 export function Hero() {
   return (
     <>
-      <div className="hidden xl:block">
+      <div className="hidden xl:block font-DMSans">
         <DesktopHero />
       </div>
-      <div className="block xl:hidden">
+      <div className="block xl:hidden font-DMSans">
         <MobileHero />
       </div>
     </>

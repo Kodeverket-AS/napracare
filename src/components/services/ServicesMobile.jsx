@@ -15,7 +15,7 @@ import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 
-export function ServicesMobile() {
+export default function ServicesMobile() {
   const [openModal, setOpenModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -43,11 +43,19 @@ export function ServicesMobile() {
   );
 
   return (
+<<<<<<< HEAD
     <div className="my-8 max-w-[1488px] text-main-500">
       <div className="header mb-12 mt-16">
         <h1 className="text-3xl font-bold mb-4">Tjenester</h1>
         <div className="flex flex-col justify-between">
           <h2 className="max-w-8/10 text-xl mb-4 md:mb-0">
+=======
+    <div className="px-4 my-8 mx-4 max-w-[1488px] text-main-500">
+      <div className="header mb-12 mt-16">
+        <h1 className="mt-8 lg:mt-0 text-[48px] font-DMSans text-main-500 font-semibold ">Tjenester</h1>
+        <div className="flex  items-center justify-between">
+          <h2 className="max-w-8/10  text-main-500 text-base font-normal mb-4 md:mb-0">
+>>>>>>> origin/development
             Her får du hjelp til dine akutte og langvarige problemer gjennom
             manuell behandling som sørger for å minske smerte og gjenskape
             kroppens naturlige funksjon og bevegelighet. Hos oss får du time
@@ -92,8 +100,8 @@ export function ServicesMobile() {
             </div>
 
             <div className="mt-10 md:mt-20">
-              <h2 className="text-xl font-semibold mb-2">{service.header}</h2>
-              <p className="text-base">
+              <h2 className="text-2xl font-medium font-DMSans mb-8">{service.header}</h2>
+              <p className="text-base text-dark-text group-hover:text-white ">
                 {service.text.length > 100
                   ? service.text.slice(0, 100) + "..."
                   : service.text}
@@ -120,8 +128,8 @@ export function ServicesMobile() {
             </div>
 
             <div className="mt-10 md:mt-20">
-              <h2 className="text-lg font-semibold mb-2">{service.header}</h2>
-              <p className="text-base">
+              <h2 className="text-2xl font-medium font-DMSans mb-8">{service.header}</h2>
+              <p className="text-base text-dark-text group-hover:text-white">
                 {service.text.length > 100
                   ? service.text.slice(0, 100) + "..."
                   : service.text}
@@ -173,10 +181,10 @@ export function ServicesMobile() {
               </div>
             </div>
 
-            {/* Pozioma linia */}
+        
             <hr className="my-6 border-gray-300" />
 
-            {/* Przyciski (pod sobą na telefonie) */}
+          
             <div className="flex flex-col gap-4 items-center">
               <button
                 onClick={handleClose}

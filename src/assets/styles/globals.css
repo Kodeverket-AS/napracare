@@ -12,6 +12,11 @@
 
 @theme inline {
   --color-main-500: #1b365d;
+  --color-main-400:#274b85;
+  --color-main-300:#336699;
+  --color-main-100:#f0f4fa;
+  --color-dark-text:#333333;
+  --font-DMSans:"DMSans", sans-serif ;
 }
 
 body {
@@ -22,7 +27,8 @@ body {
   min-height: 100svh;
   background: var(--background);
   color: var(--foreground);
-  font-family: DMSans, sans-serif;
+  font-family: Inter , sans-serif;
+  overflow-x: hidden;
 }
 
 main {
