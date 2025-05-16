@@ -13,7 +13,7 @@ export function MobileHero() {
           </p>
           <button
             className="flex justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 
-           cursor-pointer h-[56px] mx-5 mb-[40px] rounded-[8px] text-white text-lg md:w-[188px]"
+           cursor-pointer h-[56px] mx-5 mb-[40px] rounded-[8px] text-white text-lg min-w-[188px]"
           >
             Bestill time <ArrowRight />
           </button>

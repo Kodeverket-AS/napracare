@@ -94,7 +94,7 @@ export function NavbarMobile() {
 
       {isMenuOpen && (
         <div className="fixed w-screen mobile-menu bg-white shadow-md">
-          <div className="container mx-auto px-4 py-3 font-DMSansflex flex-col space-y-4">
+          <div className="container mx-auto px-4 py-3 font-DMSans flex flex-col space-y-4">
             {[
               { id: "services", label: "Tjenester" },
               { id: "about", label: "Hva er Naprapati" },
