@@ -1,6 +1,5 @@
 import { MobileHero } from "./mobileHero";
 import { DesktopHero } from "./desktopHero";
-import { Naprapati } from "../whatIsNaprapat/Naprapati";
 
 export function Hero() {
   return (

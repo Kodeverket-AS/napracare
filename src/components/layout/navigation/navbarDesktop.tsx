@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 
 export function NavbarDesktop() {
   const scrollToSection = (sectionId: string) => {
