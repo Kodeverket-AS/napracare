@@ -73,8 +73,8 @@ export function NavbarDesktop() {
           </div>
 
           <div className="flex-shrink-0">
-            <button className="bg-dark-primary hover:bg-dark-primary-hover text-white font-medium py-2 px-6 rounded-md transition-colors duration-300">
-              Bestill time
+            <button className="flex justify-center items-center gap-[16px] bg-main-500 w-[320px] h-[56px] mb-[40px] rounded-[8px] text-white text-lg sm:w-[188px]">
+              Bestill time <ArrowRight />
             </button>
           </div>
         </div>
