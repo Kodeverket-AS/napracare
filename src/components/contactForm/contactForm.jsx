@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
-import {
-  TextField,
-  Button,
-  Box,
-  Typography,
-  Paper,
-} from '@mui/material';
+import { useState } from "react";
+import { TextField, Button, Box, Typography, Paper } from "@mui/material";
 
-export default function ContactForm() {
+export function ContactForm() {
   const [formData, setFormData] = useState({
-    navn: '',
-    epost: '',
-    tema: '',
-    melding: '',
+    navn: "",
+    epost: "",
+    tema: "",
+    melding: "",
   });
 
   const [status, setStatus] = useState(null);
@@ -43,7 +37,8 @@ export default function ContactForm() {
           },
         ],
         replyTo: { email: formData.epost, name: formData.navn },
-        subject: formData.tema || "Ny henvendelse fra kontaktskjema via nettside",
+        subject:
+          formData.tema || "Ny henvendelse fra kontaktskjema via nettside",
         htmlContent: `
           <h3>Ny melding fra kontaktskjemaet</h3>
           <p><strong>Navn:</strong> ${formData.navn}</p>
@@ -55,10 +50,10 @@ export default function ContactForm() {
     });
 
     if (response.ok) {
-      setStatus('Takk! Meldingen ble sendt.');
-      setFormData({ navn: '', epost: '', tema: '', melding: '' });
+      setStatus("Takk! Meldingen ble sendt.");
+      setFormData({ navn: "", epost: "", tema: "", melding: "" });
     } else {
-      setStatus('Noe gikk galt. Prøv igjen senere.');
+      setStatus("Noe gikk galt. Prøv igjen senere.");
     }
   };
 
@@ -66,16 +61,15 @@ export default function ContactForm() {
     <Paper
       elevation={3}
       sx={{
-        backgroundColor: '#f0f4fa',
-        color: '#1b365d',
-        borderRadius: '1rem',
+        backgroundColor: "#f0f4fa",
+        color: "#1b365d",
+        borderRadius: "1rem",
         p: 4,
         maxWidth: 700,
-        margin: 'auto',
-       
+        margin: "auto",
       }}
     >
-      <Typography variant="h5" gutterBottom sx={{ color: '#1b365d' }}>
+      <Typography variant="h5" gutterBottom sx={{ color: "#1b365d" }}>
         Kontakt oss
       </Typography>
 
@@ -128,16 +122,16 @@ export default function ContactForm() {
           type="submit"
           sx={{
             mt: 3,
-            backgroundColor: '#1b365d',
-            '&:hover': {
-              backgroundColor: '#274b85',
+            backgroundColor: "#1b365d",
+            "&:hover": {
+              backgroundColor: "#274b85",
             },
             paddingX: 4,
             paddingY: 1,
-            borderRadius: '8px',
-            display: 'block',
-            width: { xs: '100%',  },
-            mx: { xs: 'auto', sm: '2' },
+            borderRadius: "8px",
+            display: "block",
+            width: { xs: "100%" },
+            mx: { xs: "auto", sm: "2" },
           }}
         >
           Send melding
