@@ -7,14 +7,14 @@ export function Reviews() {
   function handleIncrement() {
     setCounter((prev) => prev + 1);
     if (counter >= reviews.length - 1) {
-      setCounter(reviews.length - 1);
+      setCounter(0);
     }
   }
 
   function handleDecrement() {
     setCounter((prev) => prev - 1);
     if (counter <= 0) {
-      setCounter(0);
+      setCounter(reviews.length - 1);
     }
   }
 
@@ -38,6 +38,8 @@ export function Reviews() {
         "Detta kan æ virkeli anbefala! Det er så deili å endeli kunne gjøra husarbei utan å ha konstant aua i ryggjen.",
     },
   ];
+
+  console.log(counter);
 
   return (
     <div
