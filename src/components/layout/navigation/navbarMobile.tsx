@@ -106,8 +106,8 @@ export function NavbarMobile() {
       </div>
 
       {isMenuOpen && (
-        <div className="fixed w-screen mobile-menu bg-white shadow-md">
-          <div className="container mx-auto px-4 py-3 font-DMSansflex flex-col space-y-4">
+        <div className="fixed w-screen mobile-menu bg-white shadow-md ">
+          <div className="container  px-4 py-6 font-DMSans flex flex-col  items-end space-y-4">
             {[
               { id: "services", label: "Tjenester" },
               { id: "about", label: "Hva er Naprapati" },
@@ -117,7 +117,7 @@ export function NavbarMobile() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-base font-medium text-gray-600`}
+                className={`text-lg font-medium text-gray-600`}
               >
                 {item.label}
               </button>
