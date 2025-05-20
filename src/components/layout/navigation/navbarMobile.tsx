@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import {ArrowRight} from "lucide-react"
 
 export function NavbarMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,7 +108,7 @@ export function NavbarMobile() {
 
         <div className="fixed w-screen mobile-menu bg-white shadow-md ">
           <div className="container  px-4 py-6 font-DMSans flex flex-col  items-end space-y-4">
-py-3 font-DMSans flex flex-col space-y-4">
+
 
             {[
               { id: "services", label: "Tjenester" },
