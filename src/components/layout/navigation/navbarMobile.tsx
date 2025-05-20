@@ -64,9 +64,9 @@ export function NavbarMobile() {
           </div>
 
          
-          <div className="flex items-center gap-4"> 
+          <div className="flex items-center gap-4 "> 
             <button 
-              className="flex justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 w-auto max-w-[320px]
+              className="hidden  md:flex justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 w-auto max-w-[320px]
                sm:max-w-[188px] h-[40px] p-5 rounded-md text-white  cursor-pointer" 
              
             >
