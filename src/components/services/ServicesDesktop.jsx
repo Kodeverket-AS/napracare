@@ -41,7 +41,7 @@ export default function ServicesDesktop() {
   );
 
   return (
-    <div className="mx-8 my-8 max-w-[1488px] text-main-500">
+    <div className=" my-8 max-w-[1488px] text-main-500">
       <div className="header mb-12 mt-16">
         <h1 className="mt-8 lg:mt-0 text-[48px] font-DMSans text-main-500 font-semibold">Tjenester</h1>
         <div className="flex  items-center justify-between">
