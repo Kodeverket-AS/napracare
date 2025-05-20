@@ -19,10 +19,10 @@ export function Naprapati() {
       </div>
       <div className="lg:w-1/2 w-full  flex flex-col px-4 lg:px-0 bg-main-100">
         <div className="m-12 ">
-          <h1 className=" lg:mt-0 text-[48px] font-DMSans text-main-500 font-semibold mb-12">
-            Hva er naprapati?
-          </h1>
-          <p className="mt-3 flex-grow text-dark-text">
+
+          <h1 className=" lg:mt-0 text-[48px] font-DMSans text-main-500 font-semibold mb-12">Hva er naprapati?</h1>
+          <p className="mt-3 md:text-justify flex-grow text-dark-text">
+
             Behandlingen bygger på ortopedisk medisin kombinert med god kunnskap
             om bevegelsesapparatets oppbygning og funksjon. Denne tanken ligger
             til grunn for naprapatien og kan betegnes som selve kjernen. Ordet

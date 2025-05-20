@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import {ArrowRight} from "lucide-react"
 
 export function NavbarMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,7 +59,18 @@ export function NavbarMobile() {
           <div className="flex-shrink-0">
             <span className="text-3xl font-bold text-text-dark">NAPRACARE</span>
           </div>
-          <div className="flex items-center gap-4">
+
+
+         
+          <div className="flex items-center gap-4 "> 
+            <button 
+              className="hidden  md:flex justify-center items-center gap-[16px] bg-main-500 hover:bg-main-400 w-auto max-w-[320px]
+               sm:max-w-[188px] h-[40px] p-5 rounded-md text-white  cursor-pointer" 
+             
+            >
+              Bestill time <ArrowRight size={16} /> 
+            </button>
+
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 focus:outline-none"
@@ -93,8 +105,11 @@ export function NavbarMobile() {
       </div>
 
       {isMenuOpen && (
-        <div className="fixed w-screen mobile-menu bg-white shadow-md">
-          <div className="container mx-auto px-4 py-3 font-DMSans flex flex-col space-y-4">
+
+        <div className="fixed w-screen mobile-menu bg-white shadow-md ">
+          <div className="container  px-4 py-6 font-DMSans flex flex-col  items-end space-y-4">
+
+
             {[
               { id: "services", label: "Tjenester" },
               { id: "about", label: "Hva er Naprapati" },
@@ -104,7 +119,7 @@ export function NavbarMobile() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-base font-medium text-gray-600`}
+                className={`text-lg font-medium text-gray-600`}
               >
                 {item.label}
               </button>
